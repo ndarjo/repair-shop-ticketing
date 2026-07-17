@@ -71,6 +71,12 @@ python manage_translations.py translate
 # After editing the new strings in your .po files, re-compile:
 python manage_translations.py compile
 ```
+#Initialize the migration folder
+flask db init
+
+#create first migration
+flask db migrate -m "Initial migration"
+
 
 ### 5. Start the Application
 ```bash

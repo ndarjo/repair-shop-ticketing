@@ -63,8 +63,6 @@ class User(UserMixin, db.Model):
     theme_preference = db.Column(db.String(20), nullable=False, default='light')
     color_theme = db.Column(db.String(50), nullable=False, default='blue')
     language_preference = db.Column(db.String(5), nullable=False, default='en')
-    currency = db.Column(db.String(10), nullable=False, default='USD')
-    currency_decimals = db.Column(db.Integer, nullable=False, default=2)
     created_at = db.Column(db.DateTime, default=datetime.now, index=True)
     
     # Multi-tenancy: Link user to a specific branch

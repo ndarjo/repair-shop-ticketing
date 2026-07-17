@@ -3,6 +3,7 @@ import urllib.parse
 from datetime import timedelta
 import logging
 from dotenv import load_dotenv, find_dotenv
+from babel import Locale
 
 # Load environment variables from env.local file as early as possible
 load_dotenv(find_dotenv('env.local'))
@@ -73,25 +74,35 @@ class Config:
     # Internationalization settings
     # Master mapping of language codes to display names.
     # The app will only show languages that have a compiled .mo file in the translations/ folder.
-    SUPPORTED_LANGUAGES = {
-        'en': 'English',
-        'id': 'Bahasa Indonesia',
-        'es': 'Español',
-        'pl': 'Polski',
-        'bg': 'Български',
-        'hr': 'Hrvatski',
-        'fr': 'Français',
-        'de': 'Deutsch',
-        'it': 'Italiano',
-        'pt': 'Português',
-        'ru': 'Русский',
-        'ja': '日本語',
-        'zh': '中文'
-    }
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_TRANSLATION_DIRECTORIES = 'translations'
 
-    # SECURITY: Limit file upload size (e.g., 2MB for logos/assets)
+    # Start with your default language
+    SUPPORTED_LANGUAGES = {
+        BABEL_DEFAULT_LOCALE: 'English'
+    }
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    translations_path = os.path.join(base_dir, BABEL_TRANSLATION_DIRECTORIES)
+
+    if os.path.exists(translations_path):
+        for locale_code in os.listdir(translations_path):
+            locale_dir = os.path.join(translations_path, locale_code, 'LC_MESSAGES')
+            
+            if os.path.isdir(locale_dir):
+                files = os.listdir(locale_dir)
+                has_mo = any(f.endswith('.mo') for f in files)
+                
+                if has_mo:
+                    try:
+                        # Automatically gets the native name (e.g., 'lt' becomes 'lietuvių')
+                        native_name = Locale.parse(locale_code).get_language_name(locale_code)
+                        # Capitalize the first letter (e.g., 'Lietuvių')
+                        SUPPORTED_LANGUAGES[locale_code] = native_name.capitalize()
+                    except Exception:
+                        # Safe fallback if the folder name isn't a valid language code
+                        SUPPORTED_LANGUAGES[locale_code] = locale_code.upper()
+        # SECURITY: Limit file upload size (e.g., 2MB for logos/assets)
     MAX_CONTENT_LENGTH = 2 * 1024 * 1024
 
     BACKUP_DIR = BACKUP_DIR

@@ -82,17 +82,14 @@ def setup():
             shop_settings.shop_email = shop_email
             if currency and currency in list_currencies():
                 shop_settings.currency = currency
-            shop_settings.currency_symbol = currency_symbol
-            shop_settings.currency_decimals = decimals
+                shop_settings.currency_symbol = currency_symbol
+                shop_settings.currency_decimals = decimals
 
             # Sync User Preferences with Setup Choices
             if language in current_app.config['SUPPORTED_LANGUAGES']:
                 current_user.language_preference = language
                 session['language'] = language # UX Sync: Update current session language immediately
 
-            if currency in list_currencies():
-                current_user.currency = currency
-                current_user.currency_decimals = shop_settings.currency_decimals
 
             shop_settings.setup_completed = True
             db.session.commit()
@@ -122,6 +119,6 @@ def setup():
                            shop_phone=shop_settings.shop_phone if shop_settings else '',
                            shop_email=shop_settings.shop_email if shop_settings else '',
                            selected_language=current_user.language_preference or session.get('language'),
-                           selected_currency=shop_settings.currency if shop_settings else current_user.currency,
+                           selected_currency=shop_settings.currency if shop_settings else '',
                            selected_currency_decimals=shop_settings.currency_decimals if shop_settings else 2,
                            selected_currency_symbol=shop_settings.currency_symbol if shop_settings else '$')

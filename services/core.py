@@ -129,7 +129,7 @@ class FinancialService:
                 ticket_id=ticket_id,
                 user_id=user_id,
                 note_type=_('Payment Voided'),
-                content=_('Payment of %(amount)s (%(method)s) was voided.', amount=format_currency(abs(amount), user.currency or 'USD', locale=get_locale()), method=_(method)),
+                content=_('Payment of %(amount)s (%(method)s) was voided.', amount=format_currency(abs(amount), user.currency, locale=get_locale()), method=_(method)),
                 is_internal=True
             )
             db.session.add(note)
@@ -176,7 +176,7 @@ class FinancialService:
             shop_info = db.session.scalar(db.select(ShopSetting).filter_by(location_id=None))
         if not shop_info:
             shop_info = db.session.scalar(db.select(ShopSetting).limit(1))
-        currency = shop_info.currency if shop_info else (user.currency or 'USD')
+        currency = shop_info.currency
 
         note_type = _('Payment Received') if amount >= 0 else _('Change Given / Refund')
         note_content = _('%(type)s: %(amount)s. Method: %(method)s. Ref: %(ref)s', 
@@ -231,7 +231,10 @@ class FinancialService:
         shop_info = db.session.scalar(db.select(ShopSetting).filter_by(location_id=invoice.location_id)) or \
                     db.session.scalar(db.select(ShopSetting).filter_by(location_id=None)) or \
                     db.session.scalar(db.select(ShopSetting).limit(1))
-        currency_symbol = shop_info.currency_symbol if shop_info else '$'
+        # Use locale-aware symbol to match the context processor (app.py)
+        currency_code = shop_info.currency if shop_info else None
+        locale = get_locale()
+        currency_symbol = get_currency_symbol(currency_code, locale=locale) if currency_code else '$'
         currency_decimals = shop_info.currency_decimals if shop_info else 2
         points_per = shop_info.loyalty_points_per_currency if shop_info else Decimal('1.00')
         est_points = invoice.subtotal_amount * points_per if shop_info and shop_info.enable_loyalty_points else 0
@@ -711,8 +714,7 @@ class DocumentService:
         # INTEGRITY: Invoices must reflect the branch's specific currency settings 
         # rather than the individual preference of the staff member viewing the file.
         invoice_currency = (shop_info.currency if shop_info and shop_info.currency else None) or \
-                          (getattr(current_user, 'currency', 'USD') if current_user and current_user.is_authenticated else 'USD')
-
+                          (getattr(current_user, 'currency'))
         brand_hex = shop_info.brand_color if shop_info and shop_info.brand_color else '#0d6efd'
         brand_color = colors.HexColor(brand_hex)
 
@@ -734,7 +736,7 @@ class DocumentService:
             item_count = ts_count + len(invoice.items)
             payment_count = len(invoice.payments) if invoice else 0
             # SCALABILITY: Dynamic height calculation for thermal rolls
-            page_height = (140 + (item_count * 12) + (payment_count * 8) + 120) * mm
+            page_height = (130 + (item_count * 12) + (payment_count * 6)) * mm
             pagesize = (page_width, page_height)
             left_margin = right_margin = 3 * mm
             top_margin = bottom_margin = 5 * mm
@@ -846,7 +848,7 @@ class DocumentService:
         # Custom formatting to strictly follow decimal settings and enable text wrapping in cells
         precision = shop_info.currency_decimals if shop_info else 2
         pattern = "#,##0" + (("." + "0" * precision) if precision > 0 else "")
-        symbol = (shop_info.currency_symbol if (shop_info and shop_info.currency_symbol) else get_currency_symbol(invoice_currency, locale=locale))
+        symbol = get_currency_symbol(invoice_currency or 'USD', locale=locale)
         
         def local_format(amt):
             return f"{symbol} {format_decimal(amt, format=pattern, locale=locale)}"
@@ -956,7 +958,7 @@ class DocumentService:
         if tax_lbl == 'Tax':
             tax_lbl = _('Tax')
 
-        if tax_rate > 0:
+        if invoice.include_tax and tax_rate > 0:
             summary_data.append([_('Subtotal:'), local_format(subtotal)])
             summary_data.append([f"{tax_lbl} ({format_decimal(tax_rate, locale=locale)}%):", local_format(tax_amount)])
 

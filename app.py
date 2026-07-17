@@ -251,10 +251,10 @@ def create_app(config_name=None):
                 'tax_label': _('Tax'),
                 'tax_rate': Decimal('0.00'), # Use Decimal for consistency
                 'tax_id': '',
-                'currency': 'USD',
+                'currency': None,
                 'currency_decimals': 2,
                 'brand_color': '#0d6efd',
-                'currency_symbol': None, # Allow get_currency_symbol to be primary source
+                'currency_symbol': '',
                 'signature_label': _('Customer Signature'),
                 'invoice_label': _('INVOICE'),
                 'receipt_label': _('RECEIPT'),
@@ -292,23 +292,11 @@ def create_app(config_name=None):
             }
             
         # INTEGRITY: Currency settings are now shop-wide to ensure consistency across all staff accounts.
-        # Prioritize branch settings with fallback to authenticated user's individual preference.
-        user_currency = 'USD'
-        decimals = None
         
-        shop_currency = _get_setting_value(shop_info, 'currency')
-        if shop_currency:
-            user_currency = shop_currency
-            decimals = _get_setting_value(shop_info, 'currency_decimals')
-        elif current_user.is_authenticated:
-            user_currency = getattr(current_user, 'currency', 'USD') or 'USD'
-            decimals = current_user.currency_decimals
-
-        if decimals is None:
-            decimals = get_currency_precision(user_currency or 'USD')
         locale = get_locale()
-        # UI CONSISTENCY: Ensure custom currency symbol is always used if defined
-        symbol = _get_setting_value(shop_info, 'currency_symbol') or get_currency_symbol(user_currency, locale=locale)
+        currency = _get_setting_value(shop_info, 'currency')
+        decimals = _get_setting_value(shop_info, 'currency_decimals')
+        symbol = get_currency_symbol(currency, locale=locale)
 
         return {
             'now': datetime.now(), 
@@ -529,8 +517,11 @@ def create_app(config_name=None):
     with app.app_context():
         db.create_all()
         # INTEGRITY: Run migrations to ensure schema is up-to-date before seeding
-        # This is crucial for production readiness and prevents errors during initialization
-        upgrade() 
+        # Only attempt upgrade if the migrations repository has been initialized.
+        # This prevents errors when running 'flask db init' for the first time.
+        if os.path.exists(os.path.join(app.root_path, 'migrations')):
+            upgrade()
+
         initialize_roles_and_permissions() # This function also patches columns
         initialize_default_data()
         initialize_superuser()

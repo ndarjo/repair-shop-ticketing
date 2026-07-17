@@ -61,6 +61,35 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% if invoice.ticket %}
+                        {% for ts in invoice.ticket.ticket_services %}
+                        <tr>
+                            <td>
+                                <strong class="text-break">{{ ts.service.name }}</strong>
+                                <br><small class="text-muted"><i class="fas fa-ticket-alt me-1" aria-hidden="true"></i>{{ _('Ticket Service') }}</small>
+                            </td>
+                            {% if shop_info and shop_info.show_sku %}
+                            <td class="text-break">-</td>
+                            {% endif %}
+                            <td class="text-center" style="width: 100px;">
+                                {{ ts.quantity }}
+                            </td>
+                            <td class="text-end" style="width: 120px;">
+                                {{ currency_symbol }}{{ "%.*f"|format(currency_decimals, ts.price_charged) }}
+                            </td>
+                            <td class="text-end fw-bold">{{ currency_symbol }}{{ "%.*f"|format(currency_decimals, ts.price_charged * ts.quantity) }}</td>
+                            {% if invoice.status != 'Paid' %}
+                            <td class="text-center">
+                                <form action="{{ url_for('pos.remove_item', invoice_id=invoice.id, item_id=ts.id) }}" method="POST" class="d-inline confirm-action" data-confirm="{{ _('Are you sure you want to remove this item?') }}">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="{{ _('Remove Item') }}" aria-label="{{ _('Remove Item') }}"><i class="fas fa-trash" aria-hidden="true"></i></button>
+                                </form>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                        {% endif %}
+
                         {% for item in invoice.items %}
                         <tr>
                             <td>
@@ -107,9 +136,11 @@
                             {% endif %}
                         </tr>
                         {% else %}
+                        {% if not (invoice.ticket and invoice.ticket.ticket_services) %}
                         <tr>
                             <td colspan="{{ (6 if shop_info and shop_info.show_sku else 5) if invoice.status != 'Paid' else (5 if shop_info and shop_info.show_sku else 4) }}" class="text-center text-muted py-4">{{ _('No items in cart.') }}</td>
                         </tr>
+                        {% endif %}
                         {% endfor %}
                     </tbody>
                     <tfoot>
@@ -258,6 +289,7 @@
                 </form>
             </div>
         </div>
+        {% endif %}
     </div>
 
     <div class="col-lg-4">

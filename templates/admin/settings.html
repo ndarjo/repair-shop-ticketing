@@ -78,8 +78,8 @@
                                     <select id="currency_decimals" name="currency_decimals" class="form-select">
                                         {% set active_decimals = selected_currency_decimals if selected_currency_decimals is defined else (settings.currency_decimals if settings else 2) %}
                                         <option value="0" {% if active_decimals|string == '0' %}selected{% endif %}>{{ _('0 (e.g., 1500)') }}</option>
-                                        <option value="2" {% if active_decimals|string == '2' %}selected{% endif %}>{{ _('2 (e.g., 15.00)') }}</option>
-                                        <option value="3" {% if active_decimals|string == '3' %}selected{% endif %}>{{ _('3') }}</option>
+                                        <option value="1" {% if active_decimals|string == '1' %}selected{% endif %}>{{ _('1 (e.g., 15.0)') }}</option>
+                                        <option value="2" {% if active_decimals|string == '2' %}selected{% endif %}>{{ _('2 (e.g., 15.00') }}</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 mb-3">

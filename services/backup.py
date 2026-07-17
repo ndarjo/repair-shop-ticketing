@@ -20,9 +20,7 @@ class BackupService:
                 'full_name': u.full_name, 'email': u.email, 'is_active': u.is_active,
                 'is_superuser': u.is_superuser, 'location_id': u.location_id,
                 'language_preference': u.language_preference, 'theme_preference': u.theme_preference,
-                'color_theme': u.color_theme, 'currency': u.currency,
-                'currency_decimals': u.currency_decimals,
-                'roles': [r.name for r in u.roles]
+                'color_theme': u.color_theme, 'roles': [r.name for r in u.roles]
             } for u in db.session.execute(db.select(User).options(joinedload(User.roles))).scalars().unique().all()],
             'roles': [{
                 'id': r.id, 'name': r.name,

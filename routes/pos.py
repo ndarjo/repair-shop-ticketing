@@ -145,8 +145,13 @@ def cart(invoice_id):
     if not shop_info:
         shop_info = db.session.scalar(db.select(ShopSetting).limit(1))
 
-    services = db.session.scalars(db.select(Service).where(Service.is_active == True, Service.location_id == loc_id)).all()
-    parts = db.session.scalars(db.select(SparePart).where(SparePart.stock_quantity > 0, SparePart.location_id == loc_id)).all()
+    services_raw = db.session.scalars(db.select(Service).where(Service.is_active == True, Service.location_id == loc_id)).all()
+    parts_raw = db.session.scalars(db.select(SparePart).where(SparePart.stock_quantity > 0, SparePart.location_id == loc_id)).all()
+
+    # Convert to plain dicts so the tojson template filter can serialize them
+    services = [{'id': s.id, 'name': s.name, 'price': float(s.price)} for s in services_raw]
+    parts = [{'id': p.id, 'name': p.name, 'sku': p.sku, 'selling_price': float(p.selling_price), 'stock_quantity': p.stock_quantity} for p in parts_raw]
+
     return render_template('pos/cart.html', invoice=invoice, services=services, parts=parts, shop_info=shop_info)
 
 @pos_bp.route('/update_item_details/<int:invoice_id>/<int:item_id>', methods=['POST'])
@@ -406,7 +411,7 @@ def checkout(invoice_id):
         if success:
             db.session.commit()
             flash(_('Sale completed successfully!'), 'success')
-            return redirect(url_for('pos.index'))
+            return redirect(url_for('pos.cart', invoice_id=invoice_id))
         else:
             flash(result, 'danger')
     except Exception as e:

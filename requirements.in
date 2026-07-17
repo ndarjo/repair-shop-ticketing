@@ -20,3 +20,5 @@ reportlab
 # Utilities
 email-validator
 babel
+polib
+deep-translator

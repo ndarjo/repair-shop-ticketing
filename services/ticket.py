@@ -121,15 +121,14 @@ class RepairTicketService:
                         db.session.scalar(db.select(ShopSetting).filter_by(location_id=None))
             if not shop_info:
                 shop_info = db.session.scalar(db.select(ShopSetting).limit(1))
-
-            user_currency = shop_info.currency if shop_info and shop_info.currency else (creator.currency or 'USD')
+            
             
             payment_note = Note(
                 ticket_id=ticket.id,
                 user_id=creator_id,
                 note_type=_('Down Payment'),
                 content=_('Initial down payment of %(amount)s received via %(method)s.',
-                          amount=format_currency(down_payment, user_currency, locale=get_locale()),
+                          amount=format_currency(down_payment, shop_info.currency, locale=get_locale()),
                           method=_(payment_method_key)),
                 is_internal=True,
                 created_at=created_at

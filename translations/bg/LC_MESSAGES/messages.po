@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-17 20:04+0700\n"
+"POT-Creation-Date: 2026-07-17 18:59+0700\n"
 "PO-Revision-Date: 2026-06-17 02:39+0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: bg <LL@li.org>\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: app.py:178 app.py:186
+#: app.py:188 app.py:196
 msgid "Please log in to access this page."
 msgstr "Моля, влезте за достъп до тази страница."
 
-#: app.py:184 app.py:281 app.py:285
+#: app.py:194 app.py:320 app.py:324
 msgid "Unauthorized: Please log in"
 msgstr "Неоторизиран: Моля, влезте"
 
-#: app.py:229 routes/setup.py:106 services/core.py:705 services/core.py:744
-#: services/setup.py:143 templates/Auth/login.html:3
-#: templates/Auth/profile.html:3 templates/admin/settings.html:43
+#: app.py:246 routes/setup.py:117 services/core.py:784 services/core.py:825
+#: services/setup.py:156 templates/admin/settings.html:43
+#: templates/auth/login.html:3 templates/auth/profile.html:3
 #: templates/base.html:14 templates/base.html:44
 #: templates/customers/customer_detail.html:3
 #: templates/customers/customers.html:4
-#: templates/customers/edit_customer.html:3
+#: templates/customers/edit_customer.html:2
 #: templates/customers/new_customer.html:3
 #: templates/devices/device_detail.html:3 templates/devices/devices.html:4
 #: templates/devices/edit_device.html:3 templates/devices/new_device.html:3
@@ -43,19 +43,55 @@ msgstr "Неоторизиран: Моля, влезте"
 #: templates/main/dashboard.html:4 templates/onboarding/base.html:13
 #: templates/onboarding/base.html:36 templates/onboarding/setup.html:2
 #: templates/parts/manage_parts.html:4 templates/pos/index.html:4
-#: templates/tickets/invoice.html:39
+#: templates/tickets/invoice.html:40
 msgid "Repair Shop"
 msgstr "Ремонтна работилница"
 
-#: app.py:238 routes/setup.py:52 services/setup.py:120
+#: app.py:251 routes/admin.py:587 routes/admin.py:688 services/core.py:956
+#: templates/admin/settings.html:92 templates/tickets/edit_ticket.html:67
+#: templates/tickets/invoice.html:125 templates/tickets/new_ticket.html:95
+#: templates/tickets/ticket_detail.html:236
+#, fuzzy
+msgid "Tax"
+msgstr "Общо платено:"
+
+#: app.py:258 routes/admin.py:565 services/core.py:1032
+#: templates/admin/settings.html:142 templates/tickets/invoice.html:240
+#, fuzzy
+msgid "Customer Signature"
+msgstr "Информация за клиента"
+
+#: app.py:259 routes/admin.py:563 services/core.py:768
+#: templates/admin/settings.html:132 templates/tickets/invoice.html:10
+#, fuzzy
+msgid "INVOICE"
+msgstr "Фактура"
+
+#: app.py:260 routes/admin.py:564 services/core.py:761
+#: templates/admin/settings.html:137 templates/tickets/invoice.html:9
+msgid "RECEIPT"
+msgstr "КВИТОВКА"
+
+#: app.py:261 routes/admin.py:577 templates/tickets/invoice.html:196
+msgid "Loyalty Points"
+msgstr "Точки за лоялност"
+
+#: app.py:281 app.py:282 routes/admin.py:566 routes/admin.py:567
+#: services/core.py:1035 services/core.py:1037
+#: templates/admin/settings.html:157 templates/admin/settings.html:162
+#: templates/tickets/invoice.html:249
+msgid "Thank you for your business!"
+msgstr "Благодаря ви за вашия бизнес!"
+
+#: app.py:288 routes/setup.py:65 services/setup.py:133
 msgid "Main Branch"
 msgstr "Основен клон"
 
-#: app.py:294
+#: app.py:333
 msgid "Bad Request: The server could not understand your request."
 msgstr "Лоша заявка: Сървърът не можа да разбере вашата заявка."
 
-#: app.py:296
+#: app.py:335
 msgid ""
 "Bad Request: The server could not understand your request due to invalid "
 "syntax or malformed data."
@@ -63,32 +99,32 @@ msgstr ""
 "Лоша заявка: Сървърът не можа да разбере вашата заявка поради невалиден "
 "синтаксис или неправилно формирани данни."
 
-#: app.py:335 app.py:339
+#: app.py:373 app.py:376
 msgid "Forbidden: Access Denied"
 msgstr "Забранено: Достъпът е отказан"
 
-#: app.py:346 app.py:350
+#: app.py:380 app.py:384
 msgid "Not Found"
 msgstr "Не е намерено"
 
-#: app.py:362 app.py:367
+#: app.py:396 app.py:401
 msgid "Internal Server Error"
 msgstr "Вътрешна грешка на сървъра"
 
-#: app.py:376 app.py:378
+#: app.py:410 app.py:412
 msgid ""
 "Your session has expired or the form is no longer valid. Please try again."
 msgstr ""
 "Вашата сесия е изтекла или формулярът вече не е валиден. Моля, опитайте "
 "отново."
 
-#: app.py:395
+#: app.py:429
 msgid "Security Error: Unable to decrypt data. Check system configuration."
 msgstr ""
 "Грешка в сигурността: Не може да се дешифрират данни. Проверете "
 "конфигурацията на системата."
 
-#: app.py:397
+#: app.py:431
 msgid ""
 "Security Error: Unable to decrypt customer data. Your ENCRYPTION_KEY might "
 "be incorrect or has changed since this data was saved."
@@ -97,63 +133,74 @@ msgstr ""
 "ENCRYPTION_KEY може да е неправилен или да се е променил след запазването на"
 " тези данни."
 
-#: app.py:406 app.py:408
+#: app.py:440 app.py:442
 msgid "The uploaded file is too large. Maximum size is 2MB."
 msgstr "Каченият файл е твърде голям. Максималният размер е 2 MB."
 
-#: app.py:429
+#: app.py:463
 msgid "Technical Error: Unsupported request format."
 msgstr "Техническа грешка: Неподдържан формат на заявка."
 
-#: app.py:431
+#: app.py:465
 msgid "Technical Error: Unsupported request format. Please try again."
 msgstr ""
 "Техническа грешка: Неподдържан формат на заявка. Моля, опитайте отново."
 
-#: app.py:452 app.py:457
+#: app.py:484 app.py:488
 msgid ""
 "Service Unavailable: The server is temporarily busy. Please try again later."
 msgstr ""
 "Услугата е недостъпна: Сървърът е временно зает. Моля, опитайте отново по-"
 "късно."
 
-#: routes/admin.py:66
+#: routes/admin.py:86
 msgid "All fields are required."
 msgstr "Всички полета са задължителни."
 
-#: routes/admin.py:68 routes/admin.py:143 routes/auth.py:117
+#: routes/admin.py:88 routes/admin.py:170 routes/auth.py:116
 msgid "Password must be at least 8 characters"
 msgstr "Паролата трябва да е поне 8 знака"
 
-#: routes/admin.py:70 routes/auth.py:94
+#: routes/admin.py:90 routes/auth.py:93
 msgid "Username already exists"
 msgstr "Потребителското име вече съществува"
 
-#: routes/admin.py:72
+#: routes/admin.py:92
 msgid "Email already registered with another account."
 msgstr "Имейлът вече е регистриран с друг акаунт."
 
-#: routes/admin.py:79 routes/admin.py:163
+#: routes/admin.py:100 routes/admin.py:191
 msgid "Selected location is invalid."
 msgstr "Избраното местоположение е невалидно."
 
-#: routes/admin.py:81 routes/admin.py:165
+#: routes/admin.py:102 routes/admin.py:193
 msgid "Selected role is invalid."
 msgstr "Избраната роля е невалидна."
 
-#: routes/admin.py:98
+#: routes/admin.py:104 routes/admin.py:195
+#, fuzzy
+msgid ""
+"Security Error: You do not have permission to grant administrative roles."
+msgstr "Достъпът е отказан: Нямате разрешение да добавяте нови клиенти."
+
+#: routes/admin.py:115
 msgid "User created successfully"
 msgstr "Потребителят е създаден успешно"
 
-#: routes/admin.py:103
+#: routes/admin.py:120
 msgid "A database error occurred while creating the user."
 msgstr "Възникна грешка в базата данни при създаването на потребителя."
 
-#: routes/admin.py:118 routes/admin.py:207
+#: routes/admin.py:135 routes/admin.py:236
 msgid "User not found."
 msgstr "Потребителят не е намерен."
 
-#: routes/admin.py:125
+#: routes/admin.py:140 routes/admin.py:241
+#, fuzzy
+msgid "Access denied or user not found in your branch."
+msgstr "Достъпът е отказан или клиентът не е намерен."
+
+#: routes/admin.py:147
 msgid ""
 "Security Policy: Administrative accounts can only be modified by their "
 "respective owners."
@@ -161,11 +208,11 @@ msgstr ""
 "Правила за сигурност: Административните акаунти могат да се променят само от"
 " съответните им собственици."
 
-#: routes/admin.py:141
+#: routes/admin.py:168
 msgid "Full name and email are required."
 msgstr "Необходими са пълно име и имейл."
 
-#: routes/admin.py:147
+#: routes/admin.py:174
 msgid ""
 "Security Warning: You cannot deactivate your own administrative account. "
 "Deactivation ignored."
@@ -173,30 +220,30 @@ msgstr ""
 "Предупреждение за сигурност: Не можете да деактивирате собствения си "
 "административен акаунт. Деактивирането е игнорирано."
 
-#: routes/admin.py:153
+#: routes/admin.py:180
 msgid "This email address is already associated with another account."
 msgstr "Този имейл адрес вече е свързан с друг акаунт."
 
-#: routes/admin.py:168
+#: routes/admin.py:198
 msgid ""
 "Security Error: You cannot demote your own account from the superuser role."
 msgstr ""
 "Грешка в сигурността: Не можете да понижите собствения си акаунт от ролята "
 "на суперпотребител."
 
-#: routes/admin.py:182
+#: routes/admin.py:211
 msgid "User updated"
 msgstr "Потребителят е актуализиран"
 
-#: routes/admin.py:187
+#: routes/admin.py:216
 msgid "A database error occurred while updating the user."
 msgstr "Възникна грешка в базата данни при актуализирането на потребителя."
 
-#: routes/admin.py:202
+#: routes/admin.py:231
 msgid "Security Error: You cannot delete your own account."
 msgstr "Грешка в сигурността: Не можете да изтриете собствения си акаунт."
 
-#: routes/admin.py:214
+#: routes/admin.py:248
 msgid ""
 "Security Policy: Administrative accounts cannot be deleted through the "
 "management interface."
@@ -204,7 +251,7 @@ msgstr ""
 "Правила за сигурност: Административните акаунти не могат да бъдат изтривани "
 "през интерфейса за управление."
 
-#: routes/admin.py:226
+#: routes/admin.py:260
 msgid ""
 "Cannot delete user: This account has linked activity (tickets, notes, or "
 "payments). Deactivate the account instead to preserve history."
@@ -213,49 +260,49 @@ msgstr ""
 "бележки или плащания). Вместо това деактивирайте акаунта, за да запазите "
 "историята."
 
-#: routes/admin.py:232
+#: routes/admin.py:266
 msgid "User account permanently removed."
 msgstr "Потребителският акаунт е премахнат за постоянно."
 
-#: routes/admin.py:236
+#: routes/admin.py:270
 msgid "Error removing user from database."
 msgstr "Грешка при премахване на потребител от базата данни."
 
-#: routes/admin.py:252 routes/admin.py:285
+#: routes/admin.py:286 routes/admin.py:319
 msgid "Location name is required."
 msgstr "Изисква се име на местоположение."
 
-#: routes/admin.py:254
+#: routes/admin.py:288
 msgid "A location with this name already exists."
 msgstr "Местоположение с това име вече съществува."
 
-#: routes/admin.py:260
+#: routes/admin.py:294
 #, python-format
 msgid "New location \"%(name)s\" created successfully."
 msgstr "Новото местоположение „ %(name)s “ е създадено успешно."
 
-#: routes/admin.py:265
+#: routes/admin.py:299
 msgid "Error saving new location."
 msgstr "Грешка при запазване на ново местоположение."
 
-#: routes/admin.py:280 routes/admin.py:318
+#: routes/admin.py:314 routes/admin.py:352
 msgid "Location not found."
 msgstr "Местоположението не е намерено."
 
-#: routes/admin.py:293
+#: routes/admin.py:327
 msgid "Another location with this name already exists."
 msgstr "Друго местоположение с това име вече съществува."
 
-#: routes/admin.py:303
+#: routes/admin.py:337
 #, python-format
 msgid "Location \"%(name)s\" updated."
 msgstr "Местоположението „ %(name)s “ е актуализирано."
 
-#: routes/admin.py:307
+#: routes/admin.py:341
 msgid "Error updating location."
 msgstr "Грешка при актуализиране на местоположението."
 
-#: routes/admin.py:332
+#: routes/admin.py:366
 msgid ""
 "Cannot delete location: It is currently linked to existing records (users, "
 "tickets, customers, invoices, or shop settings)."
@@ -264,105 +311,105 @@ msgstr ""
 "съществуващи записи (потребители, билети, клиенти, фактури или настройки на "
 "магазина)."
 
-#: routes/admin.py:338
+#: routes/admin.py:372
 msgid "Location deleted successfully."
 msgstr "Местоположението е изтрито успешно."
 
-#: routes/admin.py:342
+#: routes/admin.py:376
 msgid "Error removing location from database."
 msgstr "Грешка при премахване на местоположението от базата данни."
 
-#: routes/admin.py:352 templates/admin/system_status.html:21
+#: routes/admin.py:386 templates/admin/system_status.html:21
 msgid "Online"
 msgstr "Онлайн"
 
-#: routes/admin.py:359
+#: routes/admin.py:393
 msgid "Non-PostgreSQL Database"
 msgstr "Не-PostgreSQL база данни"
 
-#: routes/admin.py:361 templates/admin/system_status.html:21
+#: routes/admin.py:395 templates/admin/system_status.html:21
 msgid "Offline"
 msgstr "Офлайн"
 
-#: routes/admin.py:365 routes/admin.py:371
+#: routes/admin.py:399
 msgid "Logs"
 msgstr "трупи"
 
-#: routes/admin.py:366
+#: routes/admin.py:400
 msgid "Backups"
 msgstr "Архивиране"
 
-#: routes/admin.py:367
+#: routes/admin.py:401
 msgid "Uploads"
 msgstr "Качвания"
 
-#: routes/admin.py:381
+#: routes/admin.py:415
 msgid "Operating System"
 msgstr "Операционна система"
 
-#: routes/admin.py:382
+#: routes/admin.py:416
 msgid "Python Version"
 msgstr "Версия на Python"
 
-#: routes/admin.py:383
+#: routes/admin.py:417
 msgid "Environment"
 msgstr "Околна среда"
 
-#: routes/admin.py:384
+#: routes/admin.py:418
 msgid "System Timezone"
 msgstr "Системна часова зона"
 
-#: routes/admin.py:389
+#: routes/admin.py:423
 msgid "Log Level"
 msgstr "Ниво на лог"
 
-#: routes/admin.py:390
+#: routes/admin.py:424
 msgid "Backup Schedule"
 msgstr "График за архивиране"
 
-#: routes/admin.py:390
+#: routes/admin.py:424
 #, python-format
 msgid "%(time)s UTC"
 msgstr "%(time)s UTC"
 
-#: routes/admin.py:391
+#: routes/admin.py:425
 msgid "Session Lifetime"
 msgstr "Продължителност на сесията"
 
-#: routes/admin.py:391
+#: routes/admin.py:425
 #, python-format
 msgid "%(hours)d hours"
 msgstr "%(hours)d часа"
 
-#: routes/admin.py:414
+#: routes/admin.py:448
 #, python-format
 msgid "Logical backup created successfully: %(name)s"
 msgstr "Логическото архивиране е създадено успешно: %(name)s"
 
-#: routes/admin.py:417
+#: routes/admin.py:451
 msgid "Error: Failed to generate logical backup file."
 msgstr "Грешка: Неуспешно генериране на логически архивен файл."
 
-#: routes/admin.py:438
+#: routes/admin.py:473
 #, python-format
 msgid "Full database snapshot created successfully: %(name)s"
 msgstr "Моментната снимка на пълната база данни е създадена успешно: %(name)s"
 
-#: routes/admin.py:440
+#: routes/admin.py:475
 msgid "Full snapshots are only supported for PostgreSQL installations."
 msgstr ""
 "Пълните моментни снимки се поддържат само за инсталации на PostgreSQL."
 
-#: routes/admin.py:442
+#: routes/admin.py:477
 msgid "Process returned non-zero exit status."
 msgstr "Процесът върна ненулев статус на излизане."
 
-#: routes/admin.py:443
+#: routes/admin.py:478
 #, python-format
 msgid "Error: pg_dump failed. %(msg)s"
 msgstr "Грешка: pg_dump е неуспешен.  %(msg)s"
 
-#: routes/admin.py:445
+#: routes/admin.py:480
 msgid ""
 "Error: pg_dump utility not found. Please ensure PostgreSQL client tools are "
 "installed."
@@ -370,218 +417,187 @@ msgstr ""
 "Грешка: помощната програма pg_dump не е намерена. Моля, уверете се, че "
 "клиентските инструменти на PostgreSQL са инсталирани."
 
-#: routes/admin.py:449
+#: routes/admin.py:484
 msgid "An unexpected error occurred during the backup process."
 msgstr "Възникна неочаквана грешка по време на процеса на архивиране."
 
-#: routes/admin.py:466
+#: routes/admin.py:501
 msgid "File not found."
 msgstr "Файлът не е намерен."
 
-#: routes/admin.py:474
+#: routes/admin.py:509
 msgid "No file uploaded."
 msgstr "Няма качен файл."
 
-#: routes/admin.py:479
+#: routes/admin.py:514
 msgid "No file selected."
 msgstr "Няма избран файл."
 
-#: routes/admin.py:490
+#: routes/admin.py:525
 msgid "Database restored successfully. System state has been reverted."
 msgstr ""
 "Базата данни е възстановена успешно. Състоянието на системата е върнато."
 
-#: routes/admin.py:496
+#: routes/admin.py:531
 msgid ""
 "Only .dump files (PostgreSQL binary) are supported for automated restore."
 msgstr ""
 "Само .dump файлове (двоичен файл на PostgreSQL) се поддържат за автоматично "
 "възстановяване."
 
-#: routes/admin.py:517
-msgid ""
-"System configuration is out of sync. Please run \"flask seed\" to finalize "
-"system updates."
-msgstr ""
-"Системната конфигурация не е синхронизирана. Моля, стартирайте \"flask "
-"seed\", за да финализирате системните актуализации."
-
-#: routes/admin.py:527 services/core.py:690 templates/admin/settings.html:132
-#: templates/tickets/invoice.html:10
-#, fuzzy
-msgid "INVOICE"
-msgstr "Фактура"
-
-#: routes/admin.py:528 services/core.py:683 templates/admin/settings.html:137
-#: templates/tickets/invoice.html:9
-msgid "RECEIPT"
-msgstr "КВИТОВКА"
-
-#: routes/admin.py:529 services/core.py:933 templates/admin/settings.html:142
-#: templates/tickets/invoice.html:220
-#, fuzzy
-msgid "Customer Signature"
-msgstr "Информация за клиента"
-
-#: routes/admin.py:530 routes/admin.py:531 services/core.py:936
-#: services/core.py:938 templates/admin/settings.html:157
-#: templates/admin/settings.html:162 templates/tickets/invoice.html:229
-msgid "Thank you for your business!"
-msgstr "Благодаря ви за вашия бизнес!"
-
-#: routes/admin.py:545 routes/admin.py:617 services/core.py:868
-#: templates/admin/settings.html:92 templates/tickets/edit_ticket.html:64
-#: templates/tickets/invoice.html:124 templates/tickets/new_ticket.html:88
-#: templates/tickets/ticket_detail.html:192
-#, fuzzy
-msgid "Tax"
-msgstr "Общо платено:"
-
-#: routes/admin.py:550 routes/setup.py:39
+#: routes/admin.py:592 routes/setup.py:48
 msgid "Shop name is required."
 msgstr "Името на магазина е задължително."
 
-#: routes/admin.py:601
+#: routes/admin.py:656
 msgid "Settings updated successfully!"
 msgstr "Настройките са актуализирани успешно!"
 
-#: routes/admin.py:606
+#: routes/admin.py:661
 msgid "Failed to save settings."
 msgstr "Неуспешно запазване на настройките."
 
-#: routes/auth.py:26
-msgid "Username and password are required"
+#: routes/auth.py:25
+#, fuzzy
+msgid "Username and password are required."
 msgstr "Необходими са потребителско име и парола"
 
-#: routes/auth.py:36
+#: routes/auth.py:35
 msgid "Logged in successfully!"
 msgstr "Влязохте успешно!"
 
-#: routes/auth.py:44
+#: routes/auth.py:43
 msgid "Your account is deactivated. Please contact an administrator."
 msgstr "Вашият акаунт е деактивиран. Моля, свържете се с администратор."
 
-#: routes/auth.py:47
-msgid "Invalid username or password"
+#: routes/auth.py:46
+#, fuzzy
+msgid "Invalid username or password."
 msgstr "Невалидно потребителско име или парола"
 
-#: routes/auth.py:64
+#: routes/auth.py:63
 msgid "Failed to save language preference to your profile."
 msgstr "Неуспешно запазване на езиковите предпочитания във вашия профил."
 
-#: routes/auth.py:78
+#: routes/auth.py:77
 msgid "You have been logged out."
 msgstr "Вие сте излезли."
 
-#: routes/auth.py:90
+#: routes/auth.py:89
 msgid "Username is required"
 msgstr "Изисква се потребителско име"
 
-#: routes/auth.py:99
+#: routes/auth.py:98
 msgid "Username changed successfully!"
 msgstr "Потребителското име е променено успешно!"
 
-#: routes/auth.py:104
+#: routes/auth.py:103
 msgid "A database error occurred while updating your username."
 msgstr ""
 "Възникна грешка в базата данни при актуализиране на вашето потребителско "
 "име."
 
-#: routes/auth.py:112
+#: routes/auth.py:111
 msgid "Current password is incorrect"
 msgstr "Текущата парола е неправилна"
 
-#: routes/auth.py:114
+#: routes/auth.py:113
 msgid "New passwords do not match"
 msgstr "Новите пароли не съвпадат"
 
-#: routes/auth.py:122
+#: routes/auth.py:121
 msgid "Password changed successfully!"
 msgstr "Паролата е сменена успешно!"
 
-#: routes/auth.py:127
+#: routes/auth.py:126
 msgid "A database error occurred while updating your password."
 msgstr "Възникна грешка в базата данни при актуализирането на вашата парола."
 
-#: routes/auth.py:153
+#: routes/auth.py:143
 msgid "Preferences updated successfully!"
 msgstr "Предпочитанията са актуализирани успешно!"
 
-#: routes/auth.py:158
+#: routes/auth.py:148
 msgid "A database error occurred while saving your preferences."
 msgstr "Възникна грешка в базата данни при запазване на вашите предпочитания."
 
-#: routes/customer.py:63 routes/customer.py:110 services/core.py:511
+#: routes/customer.py:67 routes/customer.py:114 services/core.py:574
 msgid "Customer not found"
 msgstr "Клиентът не е намерен"
 
-#: routes/customer.py:77 routes/customer.py:119 routes/customer.py:205
+#: routes/customer.py:81 routes/customer.py:123 routes/customer.py:225
 msgid "Name and phone are required."
 msgstr "Име и телефон са задължителни."
 
-#: routes/customer.py:89
+#: routes/customer.py:93
 msgid "Customer created successfully!"
 msgstr "Клиентът е създаден успешно!"
 
-#: routes/customer.py:94 routes/customer.py:220
+#: routes/customer.py:98 routes/customer.py:240
 msgid "A database error occurred while creating the customer."
 msgstr "Възникна грешка в базата данни при създаването на клиента."
 
-#: routes/customer.py:128
+#: routes/customer.py:134
+#, fuzzy
+msgid "A customer with this phone number already exists at this location."
+msgstr "Услуга с това име вече съществува във вашия каталог."
+
+#: routes/customer.py:144
 msgid "Customer updated successfully!"
 msgstr "Клиентът е актуализиран успешно!"
 
-#: routes/customer.py:133
+#: routes/customer.py:149
 msgid "A database error occurred while updating the customer."
 msgstr "Възникна грешка в базата данни при актуализиране на клиента."
 
-#: routes/customer.py:167 routes/customer.py:181
+#: routes/customer.py:187 routes/customer.py:201
 msgid "Access denied or customer not found."
 msgstr "Достъпът е отказан или клиентът не е намерен."
 
-#: routes/customer.py:188
+#: routes/customer.py:208
 msgid "Customer data anonymized."
 msgstr "Клиентските данни са анонимизирани."
 
-#: routes/customer.py:192
+#: routes/customer.py:212
 msgid "A database error occurred during anonymization."
 msgstr "Възникна грешка в базата данни по време на анонимизирането."
 
-#: routes/device.py:64 routes/device.py:139 routes/device.py:180
+#: routes/device.py:68 routes/device.py:163 routes/device.py:212
 msgid "Device not found"
 msgstr "Устройството не е намерено"
 
-#: routes/device.py:68 routes/device.py:144 routes/device.py:184
-#: routes/pos.py:134 routes/pos.py:157 routes/pos.py:209 routes/pos.py:264
-#: routes/pos.py:304 routes/pos.py:346 routes/pos.py:394
+#: routes/device.py:72 routes/device.py:169 routes/device.py:217
+#: routes/pos.py:135 routes/pos.py:165 routes/pos.py:230 routes/pos.py:282
+#: routes/pos.py:314 routes/pos.py:345 routes/pos.py:382 routes/pos.py:437
+#: routes/pos.py:477 routes/pos.py:519 routes/pos.py:567 routes/pos.py:603
 msgid "Access denied."
 msgstr "Достъпът е отказан."
 
-#: routes/device.py:90 routes/pos.py:101 routes/ticket.py:47
+#: routes/device.py:112 routes/pos.py:102 routes/ticket.py:57
 msgid "Invalid customer selection."
 msgstr "Невалиден избор на клиент."
 
-#: routes/device.py:108
+#: routes/device.py:130
 msgid "Device added successfully!"
 msgstr "Устройството е добавено успешно!"
 
-#: routes/device.py:113
+#: routes/device.py:135
 msgid "A database error occurred while saving the device."
 msgstr "Възникна грешка в базата данни при запазване на устройството."
 
-#: routes/device.py:161
+#: routes/device.py:193
 msgid "Device type and brand are required."
 msgstr "Изискват се тип и марка на устройството."
 
-#: routes/device.py:166
+#: routes/device.py:198
 msgid "Device updated."
 msgstr "Устройството е актуализирано."
 
-#: routes/device.py:171
+#: routes/device.py:203
 msgid "An error occurred while updating the device."
 msgstr "Възникна грешка при актуализирането на устройството."
 
-#: routes/device.py:190
+#: routes/device.py:223
 #, python-format
 msgid ""
 "Cannot delete device: It is linked to %(count)s tickets. Archive it instead."
@@ -589,278 +605,354 @@ msgstr ""
 "Устройството не може да се изтрие: то е свързано с %(count)s билети. Вместо "
 "това го архивирайте."
 
-#: routes/device.py:197
+#: routes/device.py:230
 msgid "Device deleted successfully."
 msgstr "Устройството е изтрито успешно."
 
-#: routes/device.py:202
+#: routes/device.py:235
 msgid "An error occurred while deleting the device."
 msgstr "Възникна грешка при изтриването на устройството."
 
-#: routes/device.py:230
+#: routes/device.py:265
 msgid "Invalid customer."
 msgstr "Невалиден клиент."
 
-#: routes/device.py:252
+#: routes/device.py:287
 msgid "A database error occurred."
 msgstr "Възникна грешка в базата данни."
 
-#: routes/inventory.py:58 routes/inventory.py:137
+#: routes/inventory.py:71 routes/inventory.py:180
 msgid "Part name is required."
 msgstr "Името на частта е задължително."
 
-#: routes/inventory.py:69
+#: routes/inventory.py:90
 msgid "A part with this name already exists in your inventory."
 msgstr "Част с това име вече съществува в инвентара ви."
 
-#: routes/inventory.py:78
+#: routes/inventory.py:101
 msgid "A part with this SKU already exists in your inventory."
 msgstr "Част с този SKU вече съществува в инвентара ви."
 
-#: routes/inventory.py:85 routes/inventory.py:163
+#: routes/inventory.py:107 routes/inventory.py:209
 msgid "Stock, cost, and price cannot be negative."
 msgstr "Наличността, себестойността и цената не могат да бъдат отрицателни."
 
-#: routes/inventory.py:110
+#: routes/inventory.py:134
 msgid "New part added to inventory."
 msgstr "Добавена нова част към инвентара."
 
-#: routes/inventory.py:114
+#: routes/inventory.py:139
 msgid "Error adding part to inventory."
 msgstr "Грешка при добавяне на част към инвентара."
 
-#: routes/inventory.py:125
+#: routes/inventory.py:166
 msgid "Part not found."
 msgstr "Частта не е намерена."
 
-#: routes/inventory.py:147
+#: routes/inventory.py:192
 msgid "Another part already uses this name."
 msgstr "Друга част вече използва това име."
 
-#: routes/inventory.py:156
+#: routes/inventory.py:203
 msgid "Another part already uses this SKU."
 msgstr "Друга част вече използва този SKU."
 
-#: routes/inventory.py:187
+#: routes/inventory.py:235
 msgid "Inventory item updated."
 msgstr "Артикулът от инвентара е актуализиран."
 
-#: routes/inventory.py:191
+#: routes/inventory.py:240
 msgid "Error updating inventory item."
 msgstr "Грешка при актуализиране на артикула от инвентара."
 
-#: routes/inventory.py:202
+#: routes/inventory.py:254
 msgid "Part not found"
 msgstr "Частта не е намерена"
 
-#: routes/inventory.py:228
+#: routes/inventory.py:282
+#, fuzzy
+msgid ""
+"Cannot delete part: It is linked to existing sales records. Archive it "
+"instead or remove from sales first."
+msgstr ""
+"Не може да се изтрие част: тя е свързана със съществуващи записи за "
+"продажби. Вместо това го архивирайте или първо го извадете от продажба."
+
+#: routes/inventory.py:288
 msgid "Part deleted."
 msgstr "Частта е изтрита."
 
-#: routes/inventory.py:232
+#: routes/inventory.py:292
 msgid "Error deleting part. It may be linked to existing tickets."
 msgstr ""
 "Грешка при изтриване на част. Може да е свързано със съществуващи билети."
 
-#: routes/inventory.py:234
+#: routes/inventory.py:294
 msgid "Part not found or access denied."
 msgstr "Частта не е намерена или достъпът е отказан."
 
-#: routes/main.py:94
+#: routes/main.py:93
 msgid "Database unreachable"
 msgstr "Базата данни е недостъпна"
 
-#: routes/main.py:120
+#: routes/main.py:122
 msgid "This problem description already exists."
 msgstr "Това описание на проблема вече съществува."
 
-#: routes/main.py:126
+#: routes/main.py:131
 msgid "Common problem added."
 msgstr "Добавен често срещан проблем."
 
-#: routes/main.py:130
-msgid "Error adding problem to database."
+#: routes/main.py:135
+#, fuzzy
+msgid "Error adding problem to the database."
 msgstr "Грешка при добавяне на проблем към базата данни."
 
-#: routes/main.py:132
+#: routes/main.py:140
 msgid "Problem description cannot be empty."
 msgstr "Описанието на проблема не може да бъде празно."
 
-#: routes/main.py:168
+#: routes/main.py:165
+msgid ""
+"Cannot delete common problem: It is referenced in existing tickets. Consider"
+" editing or deactivating it instead."
+msgstr ""
+"Не може да се изтрие често срещан проблем: Посочен е в съществуващи билети. "
+"Помислете вместо това да го редактирате или деактивирате."
+
+#: routes/main.py:171
 msgid "Problem removed."
 msgstr "Проблемът е отстранен."
 
-#: routes/main.py:172
+#: routes/main.py:175
 msgid "Error removing problem."
 msgstr "Грешка при премахването на проблема."
 
-#: routes/main.py:174
+#: routes/main.py:177
 msgid "Problem not found or access denied."
 msgstr "Проблемът не е открит или достъпът е отказан."
 
-#: routes/pos.py:114
+#: routes/pos.py:115
 msgid "Failed to create sale."
 msgstr "Неуспешно създаване на продажба."
 
-#: routes/pos.py:124 routes/pos.py:150 routes/pos.py:202 routes/pos.py:253
-#: routes/pos.py:293 routes/pos.py:334 routes/pos.py:383
+#: routes/pos.py:125 routes/pos.py:223 routes/pos.py:375 routes/pos.py:426
+#: routes/pos.py:466 routes/pos.py:507 routes/pos.py:556
 msgid "Sale not found."
 msgstr "Разпродажба не е открита."
 
-#: routes/pos.py:161 routes/pos.py:387
+#: routes/pos.py:159
+#, fuzzy
+msgid "Sale not found or already completed."
+msgstr "Тази продажба вече е завършена."
+
+#: routes/pos.py:171 routes/pos.py:172
+#, fuzzy
+msgid "Item not found."
+msgstr "Файлът не е намерен."
+
+#: routes/pos.py:193
+#, fuzzy
+msgid "Insufficient stock to increase quantity."
+msgstr "Недостатъчни запаси за увеличаване на количеството."
+
+#: routes/pos.py:213
+#, fuzzy
+msgid "Failed to update item."
+msgstr "Неуспешно създаване на продажба."
+
+#: routes/pos.py:234 routes/pos.py:560
 msgid "Cannot add items to a completed sale."
 msgstr "Не могат да се добавят артикули към завършена продажба."
 
-#: routes/pos.py:169
+#: routes/pos.py:242
 msgid "Please select an item."
 msgstr "Моля, изберете артикул."
 
-#: routes/pos.py:173 routes/ticket.py:386 routes/ticket.py:431
+#: routes/pos.py:246 routes/ticket.py:480 routes/ticket.py:525
 msgid "Quantity must be at least 1."
 msgstr "Количеството трябва да е поне 1."
 
-#: routes/pos.py:182
+#: routes/pos.py:255
 msgid "Invalid item type."
 msgstr "Невалиден тип елемент."
 
-#: routes/pos.py:192
+#: routes/pos.py:265
 msgid "An error occurred while adding the item."
 msgstr "Възникна грешка при добавяне на артикула."
 
-#: routes/pos.py:213
-msgid "This sale has already been completed."
-msgstr "Тази продажба вече е завършена."
+#: routes/pos.py:276 routes/pos.py:597
+#, fuzzy
+msgid "Invoice not found."
+msgstr "Фактурата не е намерена"
 
-#: routes/pos.py:221
-msgid "Invalid payment amount."
-msgstr "Невалидна сума на плащането."
-
-#: routes/pos.py:235
-msgid "Sale completed successfully!"
-msgstr "Продажбата приключи успешно!"
-
-#: routes/pos.py:242
-msgid "An error occurred during checkout."
-msgstr "Възникна грешка по време на плащане."
-
-#: routes/pos.py:257
+#: routes/pos.py:285 routes/pos.py:430
 msgid "Cannot modify a completed sale."
 msgstr "Не може да се променя завършена продажба."
 
-#: routes/pos.py:269
+#: routes/pos.py:299
+#, fuzzy
+msgid "System error"
+msgstr "Системна грешка"
+
+#: routes/pos.py:308
+#, fuzzy
+msgid "Sale not found or completed."
+msgstr "Разпродажба не е открита."
+
+#: routes/pos.py:330
+#, fuzzy
+msgid "Update failed"
+msgstr "Фаза на актуализиране"
+
+#: routes/pos.py:339
+#, fuzzy
+msgid "Redemption unavailable."
+msgstr "Услугата е недостъпна"
+
+#: routes/pos.py:356
+msgid "Insufficient points."
+msgstr "Недостатъчно точки."
+
+#: routes/pos.py:386
+msgid "This sale has already been completed."
+msgstr "Тази продажба вече е завършена."
+
+#: routes/pos.py:394
+msgid "Invalid payment amount."
+msgstr "Невалидна сума на плащането."
+
+#: routes/pos.py:408
+msgid "Sale completed successfully!"
+msgstr "Продажбата приключи успешно!"
+
+#: routes/pos.py:415
+msgid "An error occurred during checkout."
+msgstr "Възникна грешка по време на плащане."
+
+#: routes/pos.py:442
 msgid "Item not found in this sale."
 msgstr "Артикулът не е намерен в тази разпродажба."
 
-#: routes/pos.py:276
+#: routes/pos.py:449
 msgid "Item removed."
 msgstr "Елементът премахнат."
 
-#: routes/pos.py:282
+#: routes/pos.py:455
 msgid "An error occurred while removing the item."
 msgstr "Възникна грешка при премахването на елемента."
 
-#: routes/pos.py:297
+#: routes/pos.py:470
 msgid "Invalid request. Only ticket-linked services can be removed here."
 msgstr ""
 "Невалидна заявка. Тук могат да бъдат премахнати само услуги, свързани с "
 "билети."
 
-#: routes/pos.py:310
+#: routes/pos.py:483
 msgid "Invalid service selection for this sale."
 msgstr "Невалиден избор на услуга за тази продажба."
 
-#: routes/pos.py:317 routes/ticket.py:593
+#: routes/pos.py:490 routes/ticket.py:687
 msgid "Service removed."
 msgstr "Услугата е премахната."
 
-#: routes/pos.py:323
+#: routes/pos.py:496
 msgid "An error occurred while removing the service."
 msgstr "Възникна грешка при премахването на услугата."
 
-#: routes/pos.py:339
+#: routes/pos.py:512
 msgid "Invalid request. Only standalone POS sales can be erased."
 msgstr "Невалидна заявка. Само отделни POS продажби могат да бъдат изтрити."
 
-#: routes/pos.py:351
+#: routes/pos.py:524
 msgid "Cannot erase a sale with recorded payments. Void payments first."
 msgstr ""
 "Не може да изтрие продажба със записани плащания. Първо анулирайте "
 "плащанията."
 
-#: routes/pos.py:364
+#: routes/pos.py:537
 msgid "Draft sale erased successfully."
 msgstr "Проектът за продажба е изтрит успешно."
 
-#: routes/pos.py:368
+#: routes/pos.py:541
 msgid "Error erasing sale."
 msgstr "Грешка при изтриване на продажба."
 
-#: routes/pos.py:401
+#: routes/pos.py:574
 #, python-format
 msgid "No part found with SKU: %(sku)s"
 msgstr "Не е намерена част със SKU: %(sku)s"
 
-#: routes/pos.py:407
+#: routes/pos.py:580
 #, python-format
 msgid "%(name)s added to cart."
 msgstr "%(name)s добавен в количката."
 
-#: routes/pos.py:413
+#: routes/pos.py:586
 msgid "An error occurred while adding the part."
 msgstr "Възникна грешка при добавяне на частта."
 
-#: routes/report.py:32 routes/report.py:125
+#: routes/report.py:33 routes/report.py:149
 msgid "You are not assigned to a location. Please contact an administrator."
 msgstr ""
 "Не сте назначени за местоположение. Моля, свържете се с администратор."
 
-#: routes/services.py:54 routes/services.py:102
+#: routes/services.py:56 routes/services.py:127
 msgid "Service name is required."
 msgstr "Изисква се име на услугата."
 
-#: routes/services.py:65
+#: routes/services.py:73
 msgid "A service with this name already exists in your catalog."
 msgstr "Услуга с това име вече съществува във вашия каталог."
 
-#: routes/services.py:70 routes/services.py:117
+#: routes/services.py:80 routes/services.py:147
 msgid "Service price cannot be negative."
 msgstr "Цената на услугата не може да бъде отрицателна."
 
-#: routes/services.py:82
+#: routes/services.py:94
 msgid "Service added to catalog."
 msgstr "Услугата е добавена към каталога."
 
-#: routes/services.py:86
+#: routes/services.py:99
 msgid "Error adding service to catalog."
 msgstr "Грешка при добавяне на услуга към каталога."
 
-#: routes/services.py:97
+#: routes/services.py:120
 msgid "Service not found."
 msgstr "Услугата не е намерена."
 
-#: routes/services.py:112
+#: routes/services.py:140
 msgid "Another service already uses this name."
 msgstr "Друга услуга вече използва това име."
 
-#: routes/services.py:127
+#: routes/services.py:160
 msgid "Service updated."
 msgstr "Услугата е актуализирана."
 
-#: routes/services.py:131
+#: routes/services.py:165
 msgid "Error updating service."
 msgstr "Грешка при актуализиране на услугата."
 
-#: routes/services.py:145
+#: routes/services.py:185
+#, fuzzy
+msgid ""
+"Cannot delete service: It is linked to existing tickets. Deactivate it "
+"instead."
+msgstr ""
+"Не може да се изтрие услугата: тя е свързана със съществуващи билети. Вместо"
+" това го деактивирайте."
+
+#: routes/services.py:191
 msgid "Service deleted."
 msgstr "Услугата е изтрита."
 
-#: routes/services.py:149
+#: routes/services.py:195
 msgid "Error deleting service. It may be linked to existing tickets."
 msgstr ""
 "Грешка при изтриване на услугата. Може да е свързано със съществуващи "
 "билети."
 
-#: routes/services.py:151
+#: routes/services.py:197
 msgid "Service not found or access denied."
 msgstr "Услугата не е намерена или достъпът е отказан."
 
@@ -872,203 +964,232 @@ msgstr ""
 "Схемата на базата данни е остаряла. Моля, стартирайте \"flask seed\", за да "
 "синхронизирате системните таблици."
 
-#: routes/setup.py:84
+#: routes/setup.py:96
 msgid "Welcome! Shop setup is complete."
 msgstr "Добре дошли! Настройката на магазина е завършена."
 
-#: routes/setup.py:89
+#: routes/setup.py:101
 msgid "An error occurred during setup. Please try again."
 msgstr "Възникна грешка по време на настройката. Моля, опитайте отново."
 
-#: routes/ticket.py:49
+#: routes/ticket.py:59
 msgid "Invalid device selection."
 msgstr "Невалиден избор на устройство."
 
-#: routes/ticket.py:51
+#: routes/ticket.py:61
 msgid "Invalid device selection for this customer."
 msgstr "Невалиден избор на устройство за този клиент."
 
-#: routes/ticket.py:53
+#: routes/ticket.py:63
 msgid "Down payment cannot be negative."
 msgstr "Авансовото плащане не може да бъде отрицателно."
 
-#: routes/ticket.py:63 routes/ticket.py:250
+#: routes/ticket.py:73 routes/ticket.py:277
 msgid "Invalid technician assignment."
 msgstr "Невалидно назначение на техник."
 
-#: routes/ticket.py:75
+#: routes/ticket.py:85
 msgid "Invalid date or time format."
 msgstr "Невалиден формат за дата или час."
 
-#: routes/ticket.py:101
+#: routes/ticket.py:112
 #, python-format
 msgid "Ticket %(num)s created successfully!"
 msgstr "Билет %(num)s е създаден успешно!"
 
-#: routes/ticket.py:106
+#: routes/ticket.py:117
 msgid "An error occurred while creating the ticket."
 msgstr "Възникна грешка при създаването на билета."
 
-#: routes/ticket.py:143 routes/ticket.py:221 routes/ticket.py:316
-#: routes/ticket.py:350 routes/ticket.py:705 services/core.py:206
-#: services/core.py:282 services/core.py:609 services/ticket.py:146
+#: routes/ticket.py:155 routes/ticket.py:242 routes/ticket.py:394
+#: routes/ticket.py:435 routes/ticket.py:799 services/core.py:259
+#: services/core.py:335 services/ticket.py:147
 msgid "Ticket not found"
 msgstr "Билетът не е намерен"
 
-#: routes/ticket.py:225 routes/ticket.py:378 routes/ticket.py:426
-#: routes/ticket.py:573 routes/ticket.py:613 services/ticket.py:171
+#: routes/ticket.py:246 routes/ticket.py:472 routes/ticket.py:520
+#: routes/ticket.py:667 routes/ticket.py:707 services/ticket.py:172
 msgid "This ticket is locked and cannot be modified."
 msgstr "Този билет е заключен и не може да се променя."
 
-#: routes/ticket.py:264
+#: routes/ticket.py:291
 msgid "Ticket intake data updated successfully."
 msgstr "Данните за приемане на билети са актуализирани успешно."
 
-#: routes/ticket.py:269
+#: routes/ticket.py:296
 msgid "Error updating ticket data."
 msgstr "Грешка при актуализиране на данните за билета."
 
-#: routes/ticket.py:284 routes/ticket.py:374 routes/ticket.py:422
-#: routes/ticket.py:485 routes/ticket.py:530 routes/ticket.py:569
-#: routes/ticket.py:609
+#: routes/ticket.py:309 routes/ticket.py:340 services/core.py:115
+#: services/core.py:154 services/core.py:263 services/core.py:287
+#: services/core.py:339 services/core.py:360 services/core.py:436
+#: services/core.py:468 services/core.py:501 services/core.py:537
+#: services/core.py:578 services/core.py:694 services/ticket.py:36
+#: services/ticket.py:157
+msgid "Access denied"
+msgstr "Достъпът е отказан"
+
+#: routes/ticket.py:313
+#, fuzzy
+msgid "Cannot modify an archived ticket."
+msgstr "Няма бележки или записи във времевата линия за този билет."
+
+#: routes/ticket.py:330 templates/tickets/ticket_detail.html:206
+#, fuzzy
+msgid "An error occurred while toggling tax."
+msgstr "Възникна грешка при добавяне на частта."
+
+#: routes/ticket.py:349
+#, fuzzy
+msgid "Failed to update financial summary."
+msgstr "Финансово резюме"
+
+#: routes/ticket.py:363 routes/ticket.py:468 routes/ticket.py:516
+#: routes/ticket.py:579 routes/ticket.py:624 routes/ticket.py:663
+#: routes/ticket.py:703
 msgid "Access denied or ticket not found."
 msgstr "Достъпът е отказан или билетът не е намерен."
 
-#: routes/ticket.py:298
+#: routes/ticket.py:376
 #, python-format
 msgid "Ticket status updated to %(phase)s"
 msgstr "Състоянието на билета е актуализирано на %(phase)s"
 
-#: routes/ticket.py:304
+#: routes/ticket.py:382
 msgid "An unexpected error occurred during status update."
 msgstr "Възникна неочаквана грешка по време на актуализиране на състоянието."
 
-#: routes/ticket.py:382
+#: routes/ticket.py:444
+#, fuzzy
+msgid "Error preparing document."
+msgstr "Печат на документ"
+
+#: routes/ticket.py:476
 msgid "Please select a service."
 msgstr "Моля, изберете услуга."
 
-#: routes/ticket.py:391
+#: routes/ticket.py:485
 msgid "Invalid service selection."
 msgstr "Невалиден избор на услуга."
 
-#: routes/ticket.py:405
+#: routes/ticket.py:499
 msgid "Service added."
 msgstr "Добавена услуга."
 
-#: routes/ticket.py:409
+#: routes/ticket.py:503
 msgid "Error saving service addition."
 msgstr "Грешка при запазване на добавянето на услуга."
 
-#: routes/ticket.py:435
+#: routes/ticket.py:529
 msgid "Please select a part or enter a manual description."
 msgstr "Моля, изберете част или въведете ръчно описание."
 
-#: routes/ticket.py:442
+#: routes/ticket.py:536
 msgid "Invalid part selection."
 msgstr "Невалиден избор на част."
 
-#: routes/ticket.py:464
+#: routes/ticket.py:558
 msgid "Part added."
 msgstr "Добавена част."
 
-#: routes/ticket.py:468
+#: routes/ticket.py:562
 msgid "Error saving part addition."
 msgstr "Грешка при запазване на добавянето на част."
 
-#: routes/ticket.py:489
+#: routes/ticket.py:583
 #, fuzzy
 msgid "Cannot record payments for an archived ticket."
 msgstr "Няма бележки или записи във времевата линия за този билет."
 
-#: routes/ticket.py:493
+#: routes/ticket.py:587
 msgid "Payment amount must be greater than zero."
 msgstr "Сумата на плащането трябва да е по-голяма от нула."
 
-#: routes/ticket.py:513
+#: routes/ticket.py:607
 msgid "Payment recorded successfully."
 msgstr "Плащането е записано успешно."
 
-#: routes/ticket.py:517
+#: routes/ticket.py:611
 msgid "An error occurred while recording the payment."
 msgstr "Възникна грешка при записване на плащането."
 
-#: routes/ticket.py:534
+#: routes/ticket.py:628
 #, fuzzy
 msgid "Cannot void payments for an archived ticket."
 msgstr "Няма бележки или записи във времевата линия за този билет."
 
-#: routes/ticket.py:539
+#: routes/ticket.py:633
 msgid "Invalid payment record."
 msgstr "Невалиден запис на плащане."
 
-#: routes/ticket.py:557
+#: routes/ticket.py:651
 msgid "Error voiding payment."
 msgstr "Грешка при анулиране на плащането."
 
-#: routes/ticket.py:579
+#: routes/ticket.py:673
 msgid "Invalid service selection for this ticket."
 msgstr "Невалиден избор на услуга за този билет."
 
-#: routes/ticket.py:597
+#: routes/ticket.py:691
 msgid "Error removing service."
 msgstr "Грешка при премахването на услугата."
 
-#: routes/ticket.py:619
+#: routes/ticket.py:713
 msgid "Invalid part selection for this ticket."
 msgstr "Невалиден избор на част за този билет."
 
-#: routes/ticket.py:633
+#: routes/ticket.py:727
 msgid "Part removed and stock restored."
 msgstr "Премахната част и възстановена стоката."
 
-#: routes/ticket.py:637
+#: routes/ticket.py:731
 msgid "Error removing part."
 msgstr "Грешка при премахване на част."
 
-#: routes/ticket.py:649 routes/ticket.py:695
+#: routes/ticket.py:743 routes/ticket.py:789
 msgid "Ticket not found or access denied."
 msgstr "Билетът не е намерен или достъпът е отказан."
 
-#: routes/ticket.py:653
+#: routes/ticket.py:747
 #, fuzzy
 msgid "Only tickets that have been picked up or cancelled can be archived."
 msgstr ""
 "Само билети, които са били взети (Вече взети), могат да бъдат архивирани."
 
-#: routes/ticket.py:664
+#: routes/ticket.py:758
 msgid "Ticket archived."
 msgstr "Билетът е архивиран."
 
-#: routes/ticket.py:668
+#: routes/ticket.py:762
 msgid "Error archiving ticket."
 msgstr "Грешка при архивиране на билета."
 
-#: routes/ticket.py:683
+#: routes/ticket.py:777
 #, fuzzy
 msgid "Cannot delete a ticket with recorded payments. Void payments first."
 msgstr ""
 "Не може да изтрие продажба със записани плащания. Първо анулирайте "
 "плащанията."
 
-#: routes/ticket.py:688
+#: routes/ticket.py:782
 msgid "Ticket permanently erased."
 msgstr "Билетът е изтрит завинаги."
 
-#: routes/ticket.py:692
+#: routes/ticket.py:786
 msgid "Error deleting ticket. It may have linked records."
 msgstr "Грешка при изтриването на билета. Може да има свързани записи."
 
-#: routes/ticket.py:715
+#: routes/ticket.py:809
 msgid "Invoice generated successfully."
 msgstr "Фактурата е генерирана успешно."
 
-#: routes/ticket.py:719
+#: routes/ticket.py:813
 msgid "Error generating invoice."
 msgstr "Грешка при генериране на фактура."
 
-#: routes/utils.py:29 routes/utils.py:50 services/core.py:231
-#: services/core.py:304 services/core.py:378 services/core.py:412
-#: services/core.py:445 services/core.py:613
+#: routes/utils.py:29 routes/utils.py:50 services/core.py:284
+#: services/core.py:357 services/core.py:431 services/core.py:465
+#: services/core.py:498 services/core.py:691
 msgid "Authentication required"
 msgstr "Изисква се удостоверяване"
 
@@ -1076,11 +1197,11 @@ msgstr "Изисква се удостоверяване"
 msgid "Please log in first."
 msgstr "Моля, влезте първо."
 
-#: routes/utils.py:36 routes/utils.py:58 services/core.py:105
-#: services/core.py:130 services/core.py:239 services/core.py:312
-#: services/core.py:385 services/core.py:419 services/core.py:452
-#: services/core.py:486 services/core.py:517 services/core.py:619
-#: services/ticket.py:38 services/ticket.py:158
+#: routes/utils.py:36 routes/utils.py:58 services/core.py:117
+#: services/core.py:156 services/core.py:292 services/core.py:365
+#: services/core.py:438 services/core.py:472 services/core.py:505
+#: services/core.py:539 services/core.py:580 services/core.py:697
+#: services/ticket.py:38 services/ticket.py:159
 msgid "Permission denied"
 msgstr "Разрешението е отказано"
 
@@ -1088,316 +1209,328 @@ msgstr "Разрешението е отказано"
 msgid "You do not have permission to access this page."
 msgstr "Нямате разрешение за достъп до тази страница."
 
-#: services/backup.py:150
+#: services/backup.py:153
 #, python-format
 msgid "Automated backup completed. Logical: %(json)s"
 msgstr "Автоматичното архивиране е завършено. Логично: %(json)s"
 
-#: services/backup.py:152
+#: services/backup.py:155
 #, python-format
 msgid ", Full: %(dump)s"
 msgstr ", пълен: %(dump)s"
 
-#: services/backup.py:156
+#: services/backup.py:159
 #, python-format
 msgid "Logical backup failed: %(error)s"
 msgstr "Неуспешно логическо архивиране: %(error)s"
 
-#: services/backup.py:166
+#: services/backup.py:169
 msgid "Restore is only supported for PostgreSQL."
 msgstr "Възстановяването се поддържа само за PostgreSQL."
 
-#: services/backup.py:192
+#: services/backup.py:198
 msgid "Success"
 msgstr "Успех"
 
-#: services/backup.py:197
+#: services/backup.py:203
 #, python-format
 msgid "Restore failed: %(msg)s"
 msgstr "Неуспешно възстановяване: %(msg)s"
 
-#: services/backup.py:200
+#: services/backup.py:206
 #, python-format
 msgid "Unexpected restore error: %(error)s"
 msgstr "Неочаквана грешка при възстановяване: %(error)s"
 
-#: services/core.py:94
+#: services/core.py:106
 msgid "Payment not found"
 msgstr "Плащането не е намерено"
 
-#: services/core.py:99 services/core.py:124 services/core.py:208
-#: services/core.py:284 services/core.py:479 services/core.py:506
-#: services/ticket.py:32 services/ticket.py:151
+#: services/core.py:111 services/core.py:150 services/core.py:261
+#: services/core.py:337 services/core.py:532 services/core.py:569
+#: services/ticket.py:32 services/ticket.py:152
 msgid "Authorized user required"
 msgstr "Изисква се оторизиран потребител"
 
-#: services/core.py:103 services/core.py:128 services/core.py:210
-#: services/core.py:234 services/core.py:286 services/core.py:307
-#: services/core.py:383 services/core.py:415 services/core.py:448
-#: services/core.py:484 services/core.py:515 services/core.py:616
-#: services/ticket.py:36 services/ticket.py:156
-msgid "Access denied"
-msgstr "Достъпът е отказан"
+#: services/core.py:131
+#, fuzzy
+msgid "Payment Voided"
+msgstr "Плащането е получено"
 
-#: services/core.py:113
+#: services/core.py:132
+#, fuzzy, python-format
+msgid "Payment of %(amount)s (%(method)s) was voided."
+msgstr ""
+"Първоначално авансово плащане от %(amount)s, получено чрез %(method)s."
+
+#: services/core.py:139
 msgid "Payment voided successfully"
 msgstr "Плащането е анулирано успешно"
 
-#: services/core.py:120 services/core.py:227 services/core.py:300
+#: services/core.py:146 services/core.py:280 services/core.py:353
+#: services/core.py:685
 msgid "Invoice not found"
 msgstr "Фактурата не е намерена"
 
-#: services/core.py:153
+#: services/core.py:181
 msgid "Payment Received"
 msgstr "Плащането е получено"
 
-#: services/core.py:153
+#: services/core.py:181
 msgid "Change Given / Refund"
 msgstr "Дадена промяна / Възстановяване"
 
-#: services/core.py:155
+#: services/core.py:183
 #, python-format
 msgid "%(type)s: %(amount)s. Method: %(method)s. Ref: %(ref)s"
 msgstr "%(type)s : %(amount)s . Метод: %(method)s. Справка: %(ref)s"
 
-#: services/core.py:219 services/core.py:296
+#: services/core.py:272 services/core.py:349
 msgid "Quantity must be greater than zero"
 msgstr "Количеството трябва да е по-голямо от нула"
 
-#: services/core.py:223
+#: services/core.py:276
 msgid "Service not found or inactive"
 msgstr "Услугата не е намерена или неактивна"
 
-#: services/core.py:243
+#: services/core.py:296
 msgid "Service does not belong to this location"
 msgstr "Услугата не принадлежи към това местоположение"
 
-#: services/core.py:323
+#: services/core.py:376
 msgid "Part not found or inactive"
 msgstr "Частта не е намерена или неактивна"
 
-#: services/core.py:327
+#: services/core.py:380
 msgid "Part does not belong to this location"
 msgstr "Част не принадлежи към това местоположение"
 
-#: services/core.py:336
+#: services/core.py:389
 #, python-format
 msgid "Insufficient stock for \"%(name)s\". Current: %(qty)s"
 msgstr "Недостатъчни запаси за „ %(name)s “. Текущо: %(qty)s"
 
-#: services/core.py:345
+#: services/core.py:398
 msgid "Invalid part details"
 msgstr "Невалидни подробности за частта"
 
-#: services/core.py:400
+#: services/core.py:453
 msgid "Service entry not found"
 msgstr "Записът на услугата не е намерен"
 
-#: services/core.py:404
+#: services/core.py:457
 msgid "This item is a part, not a service."
 msgstr "Този артикул е част, а не услуга."
 
-#: services/core.py:409 services/core.py:442
+#: services/core.py:462 services/core.py:495
 msgid "Invoice consistency error"
 msgstr "Грешка в последователността на фактурата"
 
-#: services/core.py:437
+#: services/core.py:490
 msgid "Part entry not found"
 msgstr "Записът на част не е намерен"
 
-#: services/core.py:476
+#: services/core.py:529
 msgid "Name and phone are required"
 msgstr "Име и телефон са задължителни"
 
-#: services/core.py:496
+#: services/core.py:550
+#, fuzzy
+msgid "A customer with this phone number already exists."
+msgstr "Местоположение с това име вече съществува."
+
+#: services/core.py:559
 msgid "Failed to create customer record"
 msgstr "Неуспешно създаване на клиентски запис"
 
-#: services/core.py:503
+#: services/core.py:566
 msgid "Customer, Type, and Brand are required"
 msgstr "Изискват се клиент, тип и марка"
 
-#: services/core.py:538
+#: services/core.py:601
 msgid "Failed to create device record"
 msgstr "Неуспешно създаване на запис на устройство"
 
-#: services/core.py:685 templates/tickets/invoice.html:23
+#: services/core.py:763 templates/tickets/invoice.html:24
 #, fuzzy
 msgid "PAID"
 msgstr "Платено:"
 
-#: services/core.py:688
+#: services/core.py:766
 #, fuzzy
 msgid "JOB SHEET"
 msgstr "Не е зададено"
 
-#: services/core.py:714 services/core.py:755 templates/tickets/invoice.html:51
+#: services/core.py:793 services/core.py:836 templates/tickets/invoice.html:52
 #, fuzzy
 msgid "Email:"
 msgstr "Имейл"
 
-#: services/core.py:716 services/core.py:757 templates/tickets/invoice.html:49
+#: services/core.py:795 services/core.py:838 templates/tickets/invoice.html:50
 msgid "Tel:"
 msgstr "Тел:"
 
-#: services/core.py:720 services/core.py:776
+#: services/core.py:799 services/core.py:857
 #, fuzzy
 msgid "Invoice #:"
 msgstr "Фактура №"
 
-#: services/core.py:721 services/core.py:777 templates/tickets/invoice.html:71
+#: services/core.py:800 services/core.py:858 templates/tickets/invoice.html:72
 msgid "Date:"
 msgstr "дата:"
 
-#: services/core.py:722 services/core.py:775
+#: services/core.py:803 services/core.py:856
 #, fuzzy
 msgid "Ticket #:"
 msgstr "номер на билет"
 
-#: services/core.py:760 templates/tickets/invoice.html:52
+#: services/core.py:841 templates/tickets/invoice.html:53
 #, fuzzy
 msgid "Tax ID:"
 msgstr "Общо платено:"
 
-#: services/core.py:778 services/core.py:781
-#: templates/tickets/archive_ticket.html:22
-#: templates/tickets/ticket_detail.html:74
+#: services/core.py:859 services/core.py:862
+#: templates/tickets/archive_ticket.html:25
+#: templates/tickets/ticket_detail.html:77
 msgid "Customer:"
 msgstr "Клиент:"
 
-#: services/core.py:778 services/core.py:781 templates/pos/cart.html:182
-#: templates/pos/history.html:54 templates/reports/reports.html:101
-#: templates/tickets/invoice.html:57
+#: services/core.py:859 services/core.py:862
 msgid "Walk-in"
 msgstr "Разходка"
 
-#: services/core.py:785
+#: services/core.py:867
 #, fuzzy
 msgid "Phone:"
 msgstr "Телефон"
 
-#: services/core.py:787
+#: services/core.py:869
 #, fuzzy
 msgid "Address:"
 msgstr "Адрес"
 
-#: services/core.py:794 templates/tickets/invoice.html:66
-#: templates/tickets/ticket_detail.html:81
+#: services/core.py:876 templates/tickets/invoice.html:67
+#: templates/tickets/ticket_detail.html:84
 msgid "Technician:"
 msgstr "Техник:"
 
-#: services/core.py:797 templates/tickets/archive_ticket.html:23
-#: templates/tickets/ticket_detail.html:75
+#: services/core.py:879 templates/tickets/archive_ticket.html:26
+#: templates/tickets/ticket_detail.html:78
 msgid "Device:"
 msgstr "Устройство:"
 
-#: services/core.py:799 templates/tickets/invoice.html:77
-#: templates/tickets/ticket_detail.html:76
+#: services/core.py:881 templates/tickets/invoice.html:78
+#: templates/tickets/ticket_detail.html:79
 msgid "S/N:"
 msgstr "S/N:"
 
-#: services/core.py:815 services/core.py:819
-#: templates/parts/manage_parts.html:155 templates/parts/manage_parts.html:212
-#: templates/pos/cart.html:96 templates/services/manage_services.html:121
-#: templates/services/manage_services.html:161
-#: templates/tickets/invoice.html:90 templates/tickets/ticket_detail.html:113
+#: services/core.py:899 services/core.py:903
+#: templates/parts/manage_parts.html:156 templates/parts/manage_parts.html:213
+#: templates/services/manage_services.html:116
+#: templates/services/manage_services.html:156
+#: templates/tickets/invoice.html:91 templates/tickets/ticket_detail.html:133
 msgid "Description"
 msgstr "Описание"
 
-#: services/core.py:815 templates/pos/cart.html:97
-#: templates/reports/finance_report.html:172 templates/tickets/invoice.html:91
-#: templates/tickets/ticket_detail.html:114
+#: services/core.py:899 templates/reports/finance_report.html:194
+#: templates/tickets/invoice.html:92 templates/tickets/ticket_detail.html:137
 msgid "Qty"
 msgstr "Кол"
 
-#: services/core.py:815 services/core.py:819 templates/pos/cart.html:99
-#: templates/pos/history.html:40 templates/reports/finance_report.html:175
-#: templates/tickets/invoice.html:92 templates/tickets/ticket_detail.html:116
+#: services/core.py:899 services/core.py:903 templates/pos/history.html:40
+#: templates/reports/finance_report.html:199 templates/reports/reports.html:92
+#: templates/tickets/invoice.html:93 templates/tickets/ticket_detail.html:139
 msgid "Total"
 msgstr "Общо"
 
-#: services/core.py:825 templates/pos/cart.html:53 templates/pos/cart.html:111
-#: templates/pos/cart.html:138 templates/tickets/invoice.html:98
-#: templates/tickets/ticket_detail.html:124
+#: services/core.py:910 templates/tickets/invoice.html:99
+#: templates/tickets/ticket_detail.html:147
 msgid "Service"
 msgstr "Обслужване"
 
-#: services/core.py:871 templates/tickets/invoice.html:128
-#: templates/tickets/ticket_detail.html:186
+#: services/core.py:959 templates/tickets/invoice.html:129
+#: templates/tickets/ticket_detail.html:231
 msgid "Subtotal:"
 msgstr "Междинна сума:"
 
-#: services/core.py:875 templates/tickets/invoice.html:137
-#: templates/tickets/ticket_detail.html:197
+#: services/core.py:963 templates/tickets/invoice.html:139
+#: templates/tickets/ticket_detail.html:242
+msgid "Discount:"
+msgstr "Отстъпка:"
+
+#: services/core.py:967 templates/tickets/invoice.html:145
+#: templates/tickets/ticket_detail.html:248
+msgid "Loyalty Discount"
+msgstr "Отстъпка за лоялност"
+
+#: services/core.py:972 templates/tickets/invoice.html:150
+#: templates/tickets/ticket_detail.html:259
 msgid "Grand Total:"
 msgstr "Обща сума:"
 
-#: services/core.py:876 templates/tickets/ticket_detail.html:201
+#: services/core.py:973 templates/tickets/ticket_detail.html:263
 msgid "Paid:"
 msgstr "Платено:"
 
-#: services/core.py:877 templates/tickets/invoice.html:148
-#: templates/tickets/ticket_detail.html:209
+#: services/core.py:974 templates/tickets/invoice.html:161
+#: templates/tickets/ticket_detail.html:267
+#: templates/tickets/ticket_detail.html:268
 msgid "Balance Due:"
 msgstr "Дължимо салдо:"
 
-#: services/core.py:899
+#: services/core.py:998
 #, fuzzy
 msgid "PAYMENT HISTORY:"
 msgstr "История на плащанията"
 
-#: services/core.py:902
+#: services/core.py:1001
 #, python-format
 msgid "%(date)s - %(method)s: %(amount)s"
 msgstr "%(date)s - %(method)s : %(amount)s"
 
-#: services/core.py:909
+#: services/core.py:1008
 #, fuzzy
 msgid "REPAIR NOTES:"
 msgstr "Билети за ремонт"
 
-#: services/core.py:917
+#: services/core.py:1016
 #, fuzzy
 msgid "PAYMENT INSTRUCTIONS:"
 msgstr "История на плащанията"
 
-#: services/setup.py:71
-msgid "General"
-msgstr "генерал"
-
-#: services/setup.py:127
+#: services/setup.py:140
 msgid "Broken Screen"
 msgstr "Счупен екран"
 
-#: services/setup.py:127
+#: services/setup.py:140
 msgid "Battery Replacement"
 msgstr "Смяна на батерията"
 
-#: services/setup.py:127
+#: services/setup.py:140
 msgid "Water Damage"
 msgstr "Водни щети"
 
-#: services/setup.py:128
+#: services/setup.py:141
 msgid "Charging Port Issue"
 msgstr "Проблем с порта за зареждане"
 
-#: services/setup.py:128
+#: services/setup.py:141
 msgid "Software Failure"
 msgstr "Софтуерна грешка"
 
-#: services/setup.py:128
+#: services/setup.py:141
 msgid "No Power"
 msgstr "Без захранване"
 
-#: services/setup.py:129
+#: services/setup.py:142
 msgid "Data Recovery"
 msgstr "Възстановяване на данни"
 
-#: services/setup.py:129
+#: services/setup.py:142
 msgid "Keyboard Replacement"
 msgstr "Смяна на клавиатура"
 
-#: services/setup.py:159
+#: services/setup.py:172
 #, python-format
 msgid ""
 "Initial admin username '%(username)s' is already taken by a non-superuser. "
@@ -1407,79 +1540,79 @@ msgstr ""
 "заето от потребител, който не е суперпотребител. Системата не може да се "
 "инициализира безопасно."
 
-#: services/setup.py:163
+#: services/setup.py:176
 msgid "System Administrator"
 msgstr "Системен администратор"
 
-#: services/setup.py:191
+#: services/setup.py:204
 msgid "Database seeded."
 msgstr "Заредена база данни."
 
-#: services/setup.py:194
+#: services/setup.py:207
 #, python-format
 msgid "Error during seeding: %(error)s"
 msgstr "Грешка по време на зареждане: %(error)s"
 
-#: services/setup.py:197
+#: services/setup.py:210
 msgid "The old ENCRYPTION_KEY to decrypt existing data."
 msgstr "Старият ENCRYPTION_KEY за дешифриране на съществуващи данни."
 
-#: services/setup.py:223
+#: services/setup.py:236
 #, python-format
 msgid "Successfully re-encrypted PII for %(count)d customers."
 msgstr "Успешно повторно криптиране на PII за %(count)d клиенти."
 
-#: services/setup.py:226
+#: services/setup.py:239
 #, python-format
 msgid "Error during re-encryption: %(error)s"
 msgstr "Грешка при повторно криптиране: %(error)s"
 
-#: services/setup.py:230
+#: services/setup.py:243
 msgid "The password for the new user."
 msgstr "Паролата за новия потребител."
 
-#: services/setup.py:231
+#: services/setup.py:244
 msgid "System role to assign (admin, manager, technician, receptionist)."
 msgstr ""
 "Системна роля за присвояване (администратор, мениджър, техник, "
 "рецепционист)."
 
-#: services/setup.py:232
+#: services/setup.py:245
 msgid "Display name for the user."
 msgstr "Показвано име за потребителя."
 
-#: services/setup.py:237
+#: services/setup.py:250
 msgid "Error: Password must be at least 8 characters."
 msgstr "Грешка: Паролата трябва да е поне 8 знака."
 
-#: services/setup.py:241
+#: services/setup.py:254
 #, python-format
 msgid "Error: User %(username)s already exists."
 msgstr "Грешка: Потребител %(username)s вече съществува."
 
-#: services/setup.py:246
+#: services/setup.py:259
 #, python-format
 msgid "Error: Role %(role)s does not exist."
 msgstr "Грешка: Роля %(role)s не съществува."
 
-#: services/setup.py:263
+#: services/setup.py:276
 #, python-format
 msgid "User %(username)s created successfully."
 msgstr "Потребител %(username)s е създаден успешно."
 
-#: services/setup.py:266
+#: services/setup.py:279
 #, python-format
 msgid "Error creating user: %(error)s"
 msgstr "Грешка при създаване на потребител: %(error)s"
 
-#: services/setup.py:272
+#: services/setup.py:285
 msgid ""
 "CRITICAL: This will PERMANENTLY WIPE all database tables and data. Continue?"
 msgstr ""
 "КРИТИЧНО: Това ще изтрие ПЕРМАНЕНТНО всички таблици и данни в базата данни. "
 "Продължаване?"
 
-#: services/setup.py:275
+#: services/setup.py:288
 msgid "Database reset complete."
 msgstr "Нулирането на базата данни е завършено."
 
@@ -1517,17 +1650,17 @@ msgstr "Авансовото плащане не може да бъде отри
 msgid "Permission denied to record payments"
 msgstr "Разрешението е отказано"
 
-#: services/ticket.py:128 templates/tickets/new_ticket.html:94
+#: services/ticket.py:129 templates/tickets/new_ticket.html:101
 msgid "Down Payment"
 msgstr "Първоначално плащане"
 
-#: services/ticket.py:130
+#: services/ticket.py:131
 #, python-format
 msgid "Initial down payment of %(amount)s received via %(method)s."
 msgstr ""
 "Първоначално авансово плащане от %(amount)s, получено чрез %(method)s."
 
-#: services/ticket.py:163
+#: services/ticket.py:164
 msgid "Permission denied to mark ticket as taken"
 msgstr "Отказано е разрешение за маркиране на билета като взет"
 
@@ -1572,11 +1705,11 @@ msgstr "Клиенти"
 msgid "Devices"
 msgstr "устройства"
 
-#: templates/base.html:73 templates/reports/finance_report.html:186
+#: templates/base.html:73 templates/reports/finance_report.html:215
 msgid "Inventory"
 msgstr "Инвентаризация"
 
-#: templates/base.html:78 templates/pos/index.html:75
+#: templates/base.html:78 templates/pos/index.html:78
 msgid "Services"
 msgstr "Услуги"
 
@@ -1601,226 +1734,41 @@ msgstr "Административен панел"
 msgid "Logout"
 msgstr "Изход"
 
-#: templates/Auth/login.html:3 templates/Auth/login.html:33
+#: templates/auth/login.html:3 templates/auth/login.html:33
 #: templates/base.html:110 templates/onboarding/base.html:81
 msgid "Login"
 msgstr "Вход"
 
 #: templates/admin/locations.html:78 templates/admin/locations.html:115
 #: templates/base.html:124 templates/onboarding/base.html:95
-#: templates/parts/manage_parts.html:143 templates/parts/manage_parts.html:200
-#: templates/parts/manage_parts.html:251 templates/parts/manage_parts.html:263
+#: templates/parts/manage_parts.html:144 templates/parts/manage_parts.html:201
+#: templates/parts/manage_parts.html:252 templates/parts/manage_parts.html:264
 msgid "Close"
 msgstr "затвори"
-
-#: templates/Auth/login.html:13 templates/onboarding/base.html:31
-#, python-format
-msgid "%(shop_name)s Logo"
-msgstr "Лого %(shop_name)s"
-
-#: templates/Auth/login.html:13 templates/onboarding/base.html:31
-msgid "Shop"
-msgstr "Магазин"
-
-#: templates/Auth/login.html:18
-msgid "Staff Login"
-msgstr "Вход за персонал"
-
-#: templates/Auth/login.html:19
-msgid "Please enter your credentials to continue"
-msgstr "Моля, въведете вашите идентификационни данни, за да продължите"
-
-#: templates/Auth/login.html:24 templates/Auth/login.html:26
-#: templates/Auth/profile.html:20 templates/admin/create_user.html:34
-#: templates/admin/edit_user.html:34 templates/admin/manage_users.html:27
-msgid "Username"
-msgstr "Потребителско име"
-
-#: templates/Auth/login.html:29 templates/Auth/login.html:30
-#: templates/admin/create_user.html:63
-msgid "Password"
-msgstr "Парола"
-
-#: templates/Auth/profile.html:3 templates/Auth/profile.html:10
-msgid "My Profile"
-msgstr "Моят профил"
-
-#: templates/Auth/profile.html:9 templates/admin/dashboard.html:7
-#: templates/errors/400.html:16 templates/errors/403.html:12
-#: templates/errors/404.html:12 templates/errors/413.html:16
-#: templates/errors/415.html:16 templates/errors/500.html:16
-#: templates/errors/503.html:16
-msgid "Back to Dashboard"
-msgstr "Назад към таблото за управление"
-
-#: templates/Auth/profile.html:17
-msgid "Account Information"
-msgstr "Информация за акаунта"
-
-#: templates/Auth/profile.html:21 templates/admin/create_user.html:26
-#: templates/admin/edit_user.html:26 templates/admin/manage_users.html:28
-#: templates/customers/edit_customer.html:23
-#: templates/customers/new_customer.html:24
-#: templates/tickets/ticket_form.html:13 templates/tickets/ticket_form.html:14
-msgid "Full Name"
-msgstr "Пълно име"
-
-#: templates/Auth/profile.html:21 templates/Auth/profile.html:22
-msgid "Not set"
-msgstr "Не е зададено"
-
-#: templates/Auth/profile.html:22 templates/admin/create_user.html:30
-#: templates/admin/edit_user.html:30 templates/admin/locations.html:29
-#: templates/admin/locations.html:94 templates/admin/locations.html:131
-#: templates/admin/manage_users.html:29 templates/onboarding/setup.html:49
-msgid "Email"
-msgstr "Имейл"
-
-#: templates/Auth/profile.html:23 templates/admin/create_user.html:73
-#: templates/admin/edit_user.html:74 templates/admin/manage_users.html:31
-msgid "Roles"
-msgstr "Роли"
-
-#: templates/Auth/profile.html:25 templates/admin/manage_users.html:46
-msgid "Superuser"
-msgstr "Суперпотребител"
-
-#: templates/Auth/profile.html:30
-msgid "No roles assigned"
-msgstr "Няма разпределени роли"
-
-#: templates/Auth/profile.html:41
-msgid "Appearance Settings"
-msgstr "Настройки на външния вид"
-
-#: templates/Auth/profile.html:49
-msgid "Theme"
-msgstr "Тема"
-
-#: templates/Auth/profile.html:51
-msgid "Light"
-msgstr "светлина"
-
-#: templates/Auth/profile.html:52
-msgid "Dark"
-msgstr "Тъмно"
-
-#: templates/Auth/profile.html:53 templates/tickets/ticket_detail.html:237
-#: templates/tickets/ticket_detail.html:271
-msgid "System"
-msgstr "система"
-
-#: templates/Auth/profile.html:58
-msgid "Language"
-msgstr "език"
-
-#: templates/Auth/profile.html:67
-msgid "Color Scheme"
-msgstr "Цветова схема"
-
-#: templates/Auth/profile.html:72
-msgid "Blue"
-msgstr "Синьо"
-
-#: templates/Auth/profile.html:78
-msgid "Green"
-msgstr "Зелено"
-
-#: templates/Auth/profile.html:84
-msgid "Purple"
-msgstr "Лилаво"
-
-#: templates/Auth/profile.html:90
-msgid "Red"
-msgstr "червено"
-
-#: templates/Auth/profile.html:96
-msgid "Orange"
-msgstr "портокал"
-
-#: templates/Auth/profile.html:102
-msgid "Save Preferences"
-msgstr "Запазване на предпочитанията"
-
-#: templates/Auth/profile.html:113 templates/Auth/profile.html:123
-msgid "Change Username"
-msgstr "Промяна на потребителското име"
-
-#: templates/Auth/profile.html:116
-msgid ""
-"Are you sure you want to change your username? You will need to use the new "
-"username for all future logins."
-msgstr ""
-"Сигурни ли сте, че искате да промените потребителското си име? Ще трябва да "
-"използвате новото потребителско име за всички бъдещи влизания."
-
-#: templates/Auth/profile.html:120
-msgid "New Username"
-msgstr "Ново потребителско име"
-
-#: templates/Auth/profile.html:132 templates/Auth/profile.html:151
-msgid "Change Password"
-msgstr "Промяна на паролата"
-
-#: templates/Auth/profile.html:135
-msgid "Are you sure you want to change your password?"
-msgstr "Сигурни ли сте, че искате да промените паролата си?"
-
-#: templates/Auth/profile.html:139
-msgid "Current Password"
-msgstr "Текуща парола"
-
-#: templates/Auth/profile.html:143 templates/admin/edit_user.html:64
-msgid "New Password"
-msgstr "Нова парола"
-
-#: templates/Auth/profile.html:145 templates/admin/create_user.html:65
-msgid "Minimum 8 characters."
-msgstr "Минимум 8 знака."
-
-#: templates/Auth/profile.html:148
-msgid "Confirm New Password"
-msgstr "Потвърдете новата парола"
-
-#: templates/Auth/profile.html:169
-msgid "Please fill in the new username field."
-msgstr "Моля, попълнете полето за ново потребителско име."
-
-#: templates/Auth/profile.html:185
-msgid "All password fields are required."
-msgstr "Всички полета за парола са задължителни."
-
-#: templates/Auth/profile.html:192
-msgid "New passwords do not match."
-msgstr "Новите пароли не съвпадат."
-
-#: templates/Auth/profile.html:199
-msgid "Password must be at least 8 characters long."
-msgstr "Паролата трябва да е с дължина поне 8 знака."
 
 #: templates/admin/backup.html:2
 msgid "System Backups - Admin"
 msgstr "Системни резервни копия - Админ"
 
-#: templates/admin/backup.html:7 templates/admin/locations.html:8
+#: templates/admin/backup.html:8 templates/admin/locations.html:8
 #: templates/admin/manage_users.html:9 templates/admin/settings.html:10
 #: templates/admin/system_status.html:10
 msgid "Back to Admin Panel"
 msgstr "Назад към административния панел"
 
-#: templates/admin/backup.html:8 templates/admin/dashboard.html:46
+#: templates/admin/backup.html:9 templates/admin/dashboard.html:46
 msgid "System Backups"
 msgstr "Системни резервни копия"
 
-#: templates/admin/backup.html:10
+#: templates/admin/backup.html:11
 msgid "Manage your application's data backups."
 msgstr "Управлявайте резервните копия на данните на вашето приложение."
 
-#: templates/admin/backup.html:13
+#: templates/admin/backup.html:14
 msgid "Automated Daily Backups Active"
 msgstr "Автоматизираните ежедневни архиви са активни"
 
-#: templates/admin/backup.html:15
+#: templates/admin/backup.html:16
 #, python-format
 msgid ""
 "The system automatically performs a <strong>full database backup (PostgreSQL"
@@ -1831,19 +1779,19 @@ msgstr ""
 "(PostgreSQL Dump)</strong> всеки ден в <strong> %(hour)02d : %(min)02d "
 "</strong> (местно време) (с логически резервен JSON)."
 
-#: templates/admin/backup.html:22
+#: templates/admin/backup.html:23
 msgid "Create New Backup"
 msgstr "Създаване на ново архивиране"
 
-#: templates/admin/backup.html:28
+#: templates/admin/backup.html:29
 msgid "Select Backup Type:"
 msgstr "Изберете тип архивиране:"
 
-#: templates/admin/backup.html:32
+#: templates/admin/backup.html:33
 msgid "Logical Data Backup (JSON)"
 msgstr "Архивиране на логически данни (JSON)"
 
-#: templates/admin/backup.html:32
+#: templates/admin/backup.html:33
 msgid ""
 "Exports system data including users, customers, and tickets into a portable "
 "format."
@@ -1851,11 +1799,11 @@ msgstr ""
 "Експортира системни данни, включително потребители, клиенти и билети, в "
 "преносим формат."
 
-#: templates/admin/backup.html:38
+#: templates/admin/backup.html:39
 msgid "Full Database Snapshot"
 msgstr "Моментна снимка на пълна база данни"
 
-#: templates/admin/backup.html:38
+#: templates/admin/backup.html:39
 msgid ""
 "Exports a compressed dump for PostgreSQL (.dump) using native system "
 "utilities."
@@ -1863,15 +1811,15 @@ msgstr ""
 "Експортира компресиран дъмп за PostgreSQL (.dump) с помощта на собствени "
 "системни помощни програми."
 
-#: templates/admin/backup.html:43
+#: templates/admin/backup.html:44
 msgid "Generate Backup"
 msgstr "Генериране на резервно копие"
 
-#: templates/admin/backup.html:51
+#: templates/admin/backup.html:52
 msgid "Restore from Backup"
 msgstr "Възстановяване от резервно копие"
 
-#: templates/admin/backup.html:54
+#: templates/admin/backup.html:55
 msgid ""
 "Upload a <strong>.dump</strong> file (PostgreSQL binary) for a full system "
 "restore."
@@ -1879,7 +1827,7 @@ msgstr ""
 "Качете файл <strong>.dump</strong> (двоичен файл на PostgreSQL) за пълно "
 "възстановяване на системата."
 
-#: templates/admin/backup.html:55
+#: templates/admin/backup.html:56
 msgid ""
 "WARNING: Restoring from a backup file will overwrite all current data. Are "
 "you sure?"
@@ -1887,28 +1835,28 @@ msgstr ""
 "ПРЕДУПРЕЖДЕНИЕ: Възстановяването от архивен файл ще презапише всички текущи "
 "данни. сигурен ли си"
 
-#: templates/admin/backup.html:58
+#: templates/admin/backup.html:59
 msgid "Select Backup File"
 msgstr "Изберете Архивиран файл"
 
-#: templates/admin/backup.html:62
+#: templates/admin/backup.html:63
 msgid "Upload & Restore"
 msgstr "Качване и възстановяване"
 
-#: templates/admin/backup.html:70
+#: templates/admin/backup.html:71
 msgid "Available Backups"
 msgstr "Налични резервни копия"
 
-#: templates/admin/backup.html:71
+#: templates/admin/backup.html:72
 #, python-format
 msgid "%(count)d Files"
 msgstr "%(count)d файлове"
 
-#: templates/admin/backup.html:78
+#: templates/admin/backup.html:79
 msgid "Filename"
 msgstr "Име на файл"
 
-#: templates/admin/backup.html:79 templates/admin/locations.html:31
+#: templates/admin/backup.html:80 templates/admin/locations.html:31
 #: templates/admin/manage_users.html:34
 #: templates/common_problem/manage_common_problems.html:55
 #: templates/customers/customer_detail.html:63
@@ -1916,19 +1864,25 @@ msgstr "Име на файл"
 #: templates/customers/customers.html:73
 #: templates/devices/device_detail.html:69 templates/devices/devices.html:58
 #: templates/main/dashboard.html:79 templates/parts/manage_parts.html:60
-#: templates/pos/history.html:42 templates/reports/reports.html:93
-#: templates/services/manage_services.html:56
+#: templates/pos/history.html:42 templates/reports/reports.html:94
+#: templates/services/manage_services.html:50
 #: templates/tickets/tickets_list.html:66
 msgid "Action"
 msgstr "Действие"
 
-#: templates/admin/backup.html:87
+#: templates/admin/backup.html:88
 msgid "Download Backup File"
 msgstr "Изтеглете архивен файл"
 
-#: templates/admin/backup.html:92
+#: templates/admin/backup.html:93
 msgid "No backup files found in the repository."
 msgstr "Няма намерени архивни файлове в хранилището."
+
+#: templates/admin/backup.html:103
+#, fuzzy
+msgid "Access Denied: You do not have permission to manage system backups."
+msgstr ""
+"Достъпът е отказан: Нямате разрешение да видите състоянието на системата."
 
 #: templates/admin/create_user.html:3
 msgid "Create User - Admin"
@@ -1946,6 +1900,27 @@ msgstr "Създаване на нов потребител"
 msgid "Basic Information"
 msgstr "Основна информация"
 
+#: templates/admin/create_user.html:26 templates/admin/edit_user.html:26
+#: templates/admin/manage_users.html:28 templates/auth/profile.html:21
+#: templates/customers/edit_customer.html:22
+#: templates/customers/new_customer.html:24
+#: templates/tickets/ticket_form.html:13 templates/tickets/ticket_form.html:14
+msgid "Full Name"
+msgstr "Пълно име"
+
+#: templates/admin/create_user.html:30 templates/admin/edit_user.html:30
+#: templates/admin/locations.html:29 templates/admin/locations.html:94
+#: templates/admin/locations.html:131 templates/admin/manage_users.html:29
+#: templates/auth/profile.html:22 templates/onboarding/setup.html:49
+msgid "Email"
+msgstr "Имейл"
+
+#: templates/admin/create_user.html:34 templates/admin/edit_user.html:34
+#: templates/admin/manage_users.html:27 templates/auth/login.html:24
+#: templates/auth/login.html:26 templates/auth/profile.html:20
+msgid "Username"
+msgstr "Потребителско име"
+
 #: templates/admin/create_user.html:38 templates/admin/edit_user.html:39
 msgid "Assigned Location"
 msgstr "Присвоено местоположение"
@@ -1961,6 +1936,20 @@ msgstr "Активен (потребителят може да влезе)"
 #: templates/admin/create_user.html:59 templates/admin/edit_user.html:60
 msgid "Security Credentials"
 msgstr "Идентификационни данни за сигурност"
+
+#: templates/admin/create_user.html:63 templates/auth/login.html:29
+#: templates/auth/login.html:30
+msgid "Password"
+msgstr "Парола"
+
+#: templates/admin/create_user.html:65 templates/auth/profile.html:145
+msgid "Minimum 8 characters."
+msgstr "Минимум 8 знака."
+
+#: templates/admin/create_user.html:73 templates/admin/edit_user.html:74
+#: templates/admin/manage_users.html:31 templates/auth/profile.html:23
+msgid "Roles"
+msgstr "Роли"
 
 #: templates/admin/create_user.html:77 templates/admin/edit_user.html:78
 msgid "Primary Role"
@@ -1980,18 +1969,18 @@ msgstr "Създаване на потребител"
 
 #: templates/admin/create_user.html:92 templates/admin/edit_user.html:93
 #: templates/admin/locations.html:99 templates/admin/locations.html:136
-#: templates/admin/settings.html:256 templates/customers/edit_customer.html:41
+#: templates/admin/settings.html:256 templates/customers/edit_customer.html:40
 #: templates/customers/new_customer.html:42
 #: templates/devices/edit_device.html:84 templates/devices/new_device.html:96
-#: templates/parts/manage_parts.html:184 templates/parts/manage_parts.html:237
-#: templates/services/manage_services.html:137
-#: templates/services/manage_services.html:173
-#: templates/tickets/archive_ticket.html:31
-#: templates/tickets/edit_ticket.html:71 templates/tickets/new_ticket.html:122
-#: templates/tickets/ticket_detail.html:345
-#: templates/tickets/ticket_detail.html:422
-#: templates/tickets/ticket_detail.html:458
-#: templates/tickets/ticket_detail.html:527
+#: templates/parts/manage_parts.html:185 templates/parts/manage_parts.html:238
+#: templates/services/manage_services.html:132
+#: templates/services/manage_services.html:168
+#: templates/tickets/archive_ticket.html:34
+#: templates/tickets/edit_ticket.html:74 templates/tickets/new_ticket.html:129
+#: templates/tickets/ticket_detail.html:404
+#: templates/tickets/ticket_detail.html:481
+#: templates/tickets/ticket_detail.html:517
+#: templates/tickets/ticket_detail.html:586
 #: templates/tickets/ticket_form.html:27
 #: templates/tickets/ticket_form.html:100
 msgid "Cancel"
@@ -2000,6 +1989,14 @@ msgstr "Отказ"
 #: templates/admin/dashboard.html:3
 msgid "Admin Dashboard - Admin"
 msgstr "Администраторско табло - Админ"
+
+#: templates/admin/dashboard.html:7 templates/auth/profile.html:9
+#: templates/errors/400.html:16 templates/errors/403.html:12
+#: templates/errors/404.html:12 templates/errors/413.html:16
+#: templates/errors/415.html:16 templates/errors/500.html:16
+#: templates/errors/503.html:16 templates/tickets/new_ticket.html:8
+msgid "Back to Dashboard"
+msgstr "Назад към таблото за управление"
 
 #: templates/admin/dashboard.html:11
 msgid ""
@@ -2093,6 +2090,10 @@ msgstr "Редактиране на потребител: %(name)s"
 msgid "Username cannot be changed."
 msgstr "Потребителското име не може да се променя."
 
+#: templates/admin/edit_user.html:64 templates/auth/profile.html:143
+msgid "New Password"
+msgstr "Нова парола"
+
 #: templates/admin/edit_user.html:65
 msgid "Leave blank to keep current password"
 msgstr "Оставете празно, за да запазите текущата парола"
@@ -2106,10 +2107,10 @@ msgstr ""
 "парола на потребителя."
 
 #: templates/admin/edit_user.html:92 templates/admin/locations.html:137
-#: templates/admin/settings.html:255 templates/customers/edit_customer.html:40
-#: templates/devices/edit_device.html:83 templates/parts/manage_parts.html:185
-#: templates/services/manage_services.html:138
-#: templates/tickets/edit_ticket.html:72
+#: templates/admin/settings.html:255 templates/customers/edit_customer.html:39
+#: templates/devices/edit_device.html:83 templates/parts/manage_parts.html:186
+#: templates/services/manage_services.html:133
+#: templates/tickets/edit_ticket.html:75
 msgid "Save Changes"
 msgstr "Запазване на промените"
 
@@ -2134,7 +2135,7 @@ msgstr "Име на местоположението"
 #: templates/admin/locations.html:27 templates/admin/locations.html:86
 #: templates/admin/locations.html:123
 #: templates/customers/customer_detail.html:22
-#: templates/customers/edit_customer.html:31
+#: templates/customers/edit_customer.html:30
 #: templates/customers/new_customer.html:32 templates/onboarding/setup.html:34
 msgid "Address"
 msgstr "Адрес"
@@ -2148,16 +2149,16 @@ msgstr "Телефон"
 
 #: templates/admin/locations.html:30 templates/admin/manage_users.html:33
 #: templates/customers/customers.html:72 templates/devices/devices.html:57
-#: templates/reports/reports.html:92 templates/tickets/tickets_list.html:65
+#: templates/reports/reports.html:93 templates/tickets/tickets_list.html:65
 msgid "Created"
 msgstr "Създаден"
 
 #: templates/admin/locations.html:38 templates/admin/locations.html:39
-#: templates/admin/locations.html:40 templates/admin/manage_users.html:41
-#: templates/admin/manage_users.html:42 templates/admin/system_status.html:87
+#: templates/admin/locations.html:40 templates/admin/locations.html:41
+#: templates/admin/manage_users.html:41 templates/admin/manage_users.html:42
+#: templates/admin/manage_users.html:58 templates/admin/system_status.html:87
 #: templates/admin/system_status.html:114
 #: templates/customers/customer_detail.html:70
-#: templates/customers/customer_detail.html:110
 #: templates/customers/customers.html:87
 #: templates/devices/device_detail.html:24
 #: templates/devices/device_detail.html:25
@@ -2170,9 +2171,13 @@ msgstr "Създаден"
 #: templates/devices/device_detail.html:78 templates/devices/devices.html:66
 #: templates/devices/edit_device.html:19 templates/main/dashboard.html:89
 #: templates/main/dashboard.html:90 templates/main/dashboard.html:94
-#: templates/pos/history.html:68 templates/tickets/archive_ticket.html:23
-#: templates/tickets/ticket_detail.html:76
-#: templates/tickets/ticket_detail.html:77
+#: templates/pos/history.html:68 templates/reports/reports.html:116
+#: templates/tickets/archive_ticket.html:26
+#: templates/tickets/ticket_detail.html:79
+#: templates/tickets/ticket_detail.html:80
+#: templates/tickets/tickets_list.html:73
+#: templates/tickets/tickets_list.html:74
+#: templates/tickets/tickets_list.html:81
 msgid "N/A"
 msgstr "N/A"
 
@@ -2233,8 +2238,8 @@ msgstr "Местоположение"
 #: templates/common_problem/manage_common_problems.html:54
 #: templates/customers/customer_detail.html:98
 #: templates/devices/device_detail.html:67 templates/main/dashboard.html:77
-#: templates/parts/manage_parts.html:59 templates/pos/cart.html:189
-#: templates/pos/history.html:41 templates/services/manage_services.html:55
+#: templates/parts/manage_parts.html:59 templates/pos/history.html:41
+#: templates/services/manage_services.html:49
 msgid "Status"
 msgstr "Статус"
 
@@ -2242,15 +2247,19 @@ msgstr "Статус"
 msgid "Global"
 msgstr "Глобален"
 
+#: templates/admin/manage_users.html:46 templates/auth/profile.html:25
+msgid "Superuser"
+msgstr "Суперпотребител"
+
 #: templates/admin/manage_users.html:51
 msgid "No Roles"
 msgstr "Без роли"
 
 #: templates/admin/manage_users.html:56
 #: templates/common_problem/manage_common_problems.html:63
-#: templates/parts/manage_parts.html:82 templates/parts/manage_parts.html:180
-#: templates/services/manage_services.html:69
-#: templates/services/manage_services.html:133
+#: templates/parts/manage_parts.html:82 templates/parts/manage_parts.html:181
+#: templates/services/manage_services.html:63
+#: templates/services/manage_services.html:128
 #: templates/tickets/tickets_list.html:21
 msgid "Active"
 msgstr "Активен"
@@ -2258,7 +2267,7 @@ msgstr "Активен"
 #: templates/admin/manage_users.html:56
 #: templates/common_problem/manage_common_problems.html:63
 #: templates/parts/manage_parts.html:82
-#: templates/services/manage_services.html:69
+#: templates/services/manage_services.html:63
 msgid "Inactive"
 msgstr "Неактивен"
 
@@ -2341,19 +2350,23 @@ msgid "Currency Decimals"
 msgstr "Валутни десетични знаци"
 
 #: templates/admin/settings.html:80
-msgid "0 (e.g. 1500)"
+#, fuzzy
+msgid "0 (e.g., 1500)"
 msgstr "0 (e.g. 1500)"
 
 #: templates/admin/settings.html:81
-msgid "2 (e.g. 15.00)"
+#, fuzzy
+msgid "1 (e.g., 15.0)"
 msgstr "2 (e.g. 15.00)"
 
 #: templates/admin/settings.html:82
-msgid "3"
-msgstr "3"
+#, fuzzy
+msgid "2 (e.g., 15.00"
+msgstr "2 (e.g. 15.00)"
 
 #: templates/admin/settings.html:86
-msgid "Tax Rate (%)"
+#, fuzzy, python-format
+msgid "Tax Rate (%%)"
 msgstr "Данъчна ставка (%)"
 
 #: templates/admin/settings.html:87
@@ -2610,14 +2623,15 @@ msgstr "Версия на Database Engine:"
 
 #: templates/admin/system_status.html:25
 #: templates/customers/customer_detail.html:23
+#: templates/customers/customer_detail.html:110
 #: templates/customers/customer_detail.html:113
 #: templates/customers/customers.html:89
 #: templates/devices/device_detail.html:21
 #: templates/devices/device_detail.html:81
 #: templates/devices/new_device.html:34 templates/main/dashboard.html:97
-#: templates/pos/history.html:49 templates/pos/index.html:46
-#: templates/tickets/invoice.html:17 templates/tickets/ticket_detail.html:67
-#: templates/tickets/ticket_detail.html:303
+#: templates/pos/history.html:49 templates/tickets/invoice.html:18
+#: templates/tickets/ticket_detail.html:70
+#: templates/tickets/ticket_detail.html:362
 #: templates/tickets/tickets_list.html:77
 msgid "Unknown"
 msgstr "Неизвестен"
@@ -2667,6 +2681,140 @@ msgid "Access Denied: You do not have permission to view system status."
 msgstr ""
 "Достъпът е отказан: Нямате разрешение да видите състоянието на системата."
 
+#: templates/auth/login.html:13 templates/onboarding/base.html:31
+#, python-format
+msgid "%(shop_name)s Logo"
+msgstr "Лого %(shop_name)s"
+
+#: templates/auth/login.html:13 templates/onboarding/base.html:31
+msgid "Shop"
+msgstr "Магазин"
+
+#: templates/auth/login.html:18
+msgid "Staff Login"
+msgstr "Вход за персонал"
+
+#: templates/auth/login.html:19
+msgid "Please enter your credentials to continue"
+msgstr "Моля, въведете вашите идентификационни данни, за да продължите"
+
+#: templates/auth/profile.html:3 templates/auth/profile.html:10
+msgid "My Profile"
+msgstr "Моят профил"
+
+#: templates/auth/profile.html:17
+msgid "Account Information"
+msgstr "Информация за акаунта"
+
+#: templates/auth/profile.html:21 templates/auth/profile.html:22
+msgid "Not set"
+msgstr "Не е зададено"
+
+#: templates/auth/profile.html:30
+msgid "No roles assigned"
+msgstr "Няма разпределени роли"
+
+#: templates/auth/profile.html:41
+msgid "Appearance Settings"
+msgstr "Настройки на външния вид"
+
+#: templates/auth/profile.html:49
+msgid "Theme"
+msgstr "Тема"
+
+#: templates/auth/profile.html:51
+msgid "Light"
+msgstr "светлина"
+
+#: templates/auth/profile.html:52
+msgid "Dark"
+msgstr "Тъмно"
+
+#: templates/auth/profile.html:53 templates/tickets/ticket_detail.html:296
+#: templates/tickets/ticket_detail.html:330
+msgid "System"
+msgstr "система"
+
+#: templates/auth/profile.html:58
+msgid "Language"
+msgstr "език"
+
+#: templates/auth/profile.html:67
+msgid "Color Scheme"
+msgstr "Цветова схема"
+
+#: templates/auth/profile.html:72
+msgid "Blue"
+msgstr "Синьо"
+
+#: templates/auth/profile.html:78
+msgid "Green"
+msgstr "Зелено"
+
+#: templates/auth/profile.html:84
+msgid "Purple"
+msgstr "Лилаво"
+
+#: templates/auth/profile.html:90
+msgid "Red"
+msgstr "червено"
+
+#: templates/auth/profile.html:96
+msgid "Orange"
+msgstr "портокал"
+
+#: templates/auth/profile.html:102
+msgid "Save Preferences"
+msgstr "Запазване на предпочитанията"
+
+#: templates/auth/profile.html:113 templates/auth/profile.html:123
+msgid "Change Username"
+msgstr "Промяна на потребителското име"
+
+#: templates/auth/profile.html:116
+msgid ""
+"Are you sure you want to change your username? You will need to use the new "
+"username for all future logins."
+msgstr ""
+"Сигурни ли сте, че искате да промените потребителското си име? Ще трябва да "
+"използвате новото потребителско име за всички бъдещи влизания."
+
+#: templates/auth/profile.html:120
+msgid "New Username"
+msgstr "Ново потребителско име"
+
+#: templates/auth/profile.html:132 templates/auth/profile.html:151
+msgid "Change Password"
+msgstr "Промяна на паролата"
+
+#: templates/auth/profile.html:135
+msgid "Are you sure you want to change your password?"
+msgstr "Сигурни ли сте, че искате да промените паролата си?"
+
+#: templates/auth/profile.html:139
+msgid "Current Password"
+msgstr "Текуща парола"
+
+#: templates/auth/profile.html:148
+msgid "Confirm New Password"
+msgstr "Потвърдете новата парола"
+
+#: templates/auth/profile.html:169
+msgid "Please fill in the new username field."
+msgstr "Моля, попълнете полето за ново потребителско име."
+
+#: templates/auth/profile.html:185
+msgid "All password fields are required."
+msgstr "Всички полета за парола са задължителни."
+
+#: templates/auth/profile.html:192
+msgid "New passwords do not match."
+msgstr "Новите пароли не съвпадат."
+
+#: templates/auth/profile.html:199
+msgid "Password must be at least 8 characters long."
+msgstr "Паролата трябва да е с дължина поне 8 знака."
+
 #: templates/common_problem/manage_common_problems.html:4
 msgid "Manage Common Problems - Admin"
 msgstr "Управление на често срещани проблеми - Админ"
@@ -2686,8 +2834,8 @@ msgstr "Всички местоположения"
 
 #: templates/common_problem/manage_common_problems.html:33
 #: templates/common_problem/manage_common_problems.html:53
-#: templates/tickets/edit_ticket.html:45 templates/tickets/new_ticket.html:64
-#: templates/tickets/ticket_detail.html:85
+#: templates/tickets/edit_ticket.html:48 templates/tickets/new_ticket.html:71
+#: templates/tickets/ticket_detail.html:105
 msgid "Problem Description"
 msgstr "Описание на проблема"
 
@@ -2713,13 +2861,14 @@ msgstr "Не са открити системни проблеми."
 
 #: templates/customers/customer_detail.html:3
 #: templates/customers/customer_detail.html:19
-#: templates/customers/customers.html:80 templates/devices/devices.html:55
+#: templates/customers/customers.html:80
+#: templates/customers/edit_customer.html:2 templates/devices/devices.html:55
 #: templates/devices/edit_device.html:15 templates/main/dashboard.html:75
 #: templates/main/dashboard.html:87 templates/main/dashboard.html:132
-#: templates/pos/cart.html:181 templates/pos/history.html:38
+#: templates/pos/history.html:38 templates/pos/index.html:49
 #: templates/reports/finance_report.html:115
-#: templates/reports/finance_report.html:170 templates/reports/reports.html:89
-#: templates/tickets/edit_ticket.html:20
+#: templates/reports/finance_report.html:191 templates/reports/reports.html:89
+#: templates/tickets/edit_ticket.html:23
 #: templates/tickets/tickets_list.html:61
 msgid "Customer"
 msgstr "Клиент"
@@ -2785,7 +2934,7 @@ msgstr "Регистрирани устройства"
 #: templates/customers/customer_detail.html:61
 #: templates/customers/customer_detail.html:97
 #: templates/devices/devices.html:54 templates/main/dashboard.html:76
-#: templates/tickets/edit_ticket.html:27
+#: templates/tickets/edit_ticket.html:30
 #: templates/tickets/tickets_list.html:62
 msgid "Device"
 msgstr "устройство"
@@ -2818,17 +2967,17 @@ msgstr "Скорошни билети за ремонт"
 
 #: templates/customers/customer_detail.html:96
 #: templates/devices/device_detail.html:66 templates/main/dashboard.html:74
-#: templates/reports/finance_report.html:116
-#: templates/reports/finance_report.html:171
+#: templates/reports/finance_report.html:117
+#: templates/reports/finance_report.html:193
 #: templates/tickets/tickets_list.html:60
 msgid "Ticket #"
 msgstr "номер на билет"
 
 #: templates/customers/customer_detail.html:99
 #: templates/devices/device_detail.html:68 templates/main/dashboard.html:78
-#: templates/pos/history.html:36 templates/tickets/invoice.html:162
-#: templates/tickets/ticket_detail.html:229
-#: templates/tickets/ticket_detail.html:262
+#: templates/pos/history.html:36 templates/tickets/invoice.html:175
+#: templates/tickets/ticket_detail.html:288
+#: templates/tickets/ticket_detail.html:321
 msgid "Date"
 msgstr "Дата"
 
@@ -2868,7 +3017,7 @@ msgstr "Търсене по име или телефон..."
 
 #: templates/customers/customers.html:53 templates/devices/devices.html:38
 #: templates/parts/manage_parts.html:36
-#: templates/services/manage_services.html:35
+#: templates/services/manage_services.html:33
 #: templates/tickets/tickets_list.html:47
 msgid "Search"
 msgstr "Търсене"
@@ -2876,7 +3025,7 @@ msgstr "Търсене"
 #: templates/customers/customers.html:57 templates/devices/devices.html:42
 #: templates/parts/manage_parts.html:41
 #: templates/reports/finance_report.html:28
-#: templates/services/manage_services.html:41
+#: templates/services/manage_services.html:36
 #: templates/tickets/tickets_list.html:50
 msgid "Clear"
 msgstr "ясно"
@@ -2901,45 +3050,48 @@ msgstr "Вижте подробности за клиента"
 msgid "No customers found matching your search."
 msgstr "Няма намерени клиенти, отговарящи на вашето търсене."
 
-#: templates/customers/customers.html:96
+#: templates/customers/customers.html:96 templates/tickets/new_ticket.html:26
 msgid "No customers found."
 msgstr "Няма намерени клиенти."
 
-#: templates/customers/edit_customer.html:3
+#: templates/customers/edit_customer.html:2
 msgid "Edit Customer"
 msgstr "Редактиране на клиента"
 
-#: templates/customers/edit_customer.html:8
+#: templates/customers/edit_customer.html:7
 msgid "Edit Customer Profile"
 msgstr "Редактиране на клиентски профил"
 
-#: templates/customers/edit_customer.html:18
+#: templates/customers/edit_customer.html:17
 #: templates/customers/new_customer.html:19
 msgid "Customer Information"
 msgstr "Информация за клиента"
 
-#: templates/customers/edit_customer.html:27
+#: templates/customers/edit_customer.html:23
+#: templates/customers/new_customer.html:25
+msgid "e.g., John Doe"
+msgstr "напр. Джон Доу"
+
+#: templates/customers/edit_customer.html:26
 #: templates/customers/new_customer.html:28
 #: templates/tickets/ticket_form.html:17 templates/tickets/ticket_form.html:18
 msgid "Phone Number"
 msgstr "Телефонен номер"
 
-#: templates/customers/new_customer.html:9
-#: templates/devices/new_device.html:26 templates/tickets/ticket_form.html:6
-msgid "Add New Customer"
-msgstr "Добавяне на нов клиент"
-
-#: templates/customers/new_customer.html:25
-msgid "e.g., John Doe"
-msgstr "напр. Джон Доу"
-
+#: templates/customers/edit_customer.html:27
 #: templates/customers/new_customer.html:29
 msgid "e.g., +1 555-0123"
 msgstr "e.g., +1 555-0123"
 
+#: templates/customers/edit_customer.html:31
 #: templates/customers/new_customer.html:33
 msgid "Customer's physical address"
 msgstr "Физическият адрес на клиента"
+
+#: templates/customers/new_customer.html:9
+#: templates/devices/new_device.html:26 templates/tickets/ticket_form.html:6
+msgid "Add New Customer"
+msgstr "Добавяне на нов клиент"
 
 #: templates/customers/new_customer.html:41
 msgid "Create Customer"
@@ -2972,7 +3124,7 @@ msgid "Owner"
 msgstr "Собственик"
 
 #: templates/devices/device_detail.html:24 templates/pos/history.html:39
-#: templates/reports/finance_report.html:169
+#: templates/reports/finance_report.html:190
 msgid "Type"
 msgstr "Тип"
 
@@ -3027,7 +3179,7 @@ msgid "Repair History"
 msgstr "История на ремонта"
 
 #: templates/devices/device_detail.html:83 templates/main/dashboard.html:99
-#: templates/reports/reports.html:120
+#: templates/reports/reports.html:138
 msgid "View Ticket"
 msgstr "Вижте билета"
 
@@ -3060,7 +3212,7 @@ msgstr "Сериен номер"
 msgid "No devices found matching your criteria."
 msgstr "Няма намерени устройства, отговарящи на вашите критерии."
 
-#: templates/devices/devices.html:74 templates/tickets/new_ticket.html:38
+#: templates/devices/devices.html:74 templates/tickets/new_ticket.html:45
 msgid "No devices found."
 msgstr "Няма намерени устройства."
 
@@ -3110,8 +3262,8 @@ msgid "Printer"
 msgstr "Принтер"
 
 #: templates/devices/edit_device.html:38 templates/devices/new_device.html:50
-#: templates/pos/cart.html:220 templates/tickets/new_ticket.html:108
-#: templates/tickets/ticket_detail.html:413
+#: templates/tickets/new_ticket.html:115
+#: templates/tickets/ticket_detail.html:472
 #: templates/tickets/ticket_form.html:56
 msgid "Other"
 msgstr "други"
@@ -3370,6 +3522,7 @@ msgid "Branch View:"
 msgstr "Изглед на клон:"
 
 #: templates/main/dashboard.html:14 templates/pos/history.html:15
+#: templates/pos/index.html:15
 msgid "All Branches"
 msgstr "Всички клонове"
 
@@ -3381,7 +3534,7 @@ msgstr "Общо билети"
 msgid "In Repair"
 msgstr "В ремонт"
 
-#: templates/main/dashboard.html:46 templates/tickets/ticket_detail.html:333
+#: templates/main/dashboard.html:46 templates/tickets/ticket_detail.html:392
 msgid "Finished"
 msgstr "Готово"
 
@@ -3389,7 +3542,7 @@ msgstr "Готово"
 msgid "Recent Tickets"
 msgstr "Последни билети"
 
-#: templates/main/dashboard.html:67 templates/tickets/new_ticket.html:123
+#: templates/main/dashboard.html:67 templates/tickets/new_ticket.html:130
 #: templates/tickets/tickets_list.html:26
 msgid "Create Ticket"
 msgstr "Създаване на билет"
@@ -3402,15 +3555,17 @@ msgstr "S/N"
 msgid "No recent tickets found."
 msgstr "Няма намерени скорошни билети."
 
-#: templates/main/dashboard.html:119 templates/pos/index.html:34
+#: templates/main/dashboard.html:119 templates/pos/index.html:35
 msgid "Start New Sale"
 msgstr "Старт на нова разпродажба"
 
-#: templates/main/dashboard.html:126 templates/pos/index.html:42
+#: templates/main/dashboard.html:126 templates/pos/index.html:43
 msgid "Select Customer"
 msgstr "Изберете Клиент"
 
-#: templates/main/dashboard.html:128 templates/pos/index.html:44
+#: templates/main/dashboard.html:128 templates/pos/history.html:54
+#: templates/pos/index.html:45 templates/reports/reports.html:112
+#: templates/tickets/invoice.html:58
 msgid "Walk-in Customer"
 msgstr "Входен клиент"
 
@@ -3418,7 +3573,7 @@ msgstr "Входен клиент"
 msgid "No phone"
 msgstr "Без телефон"
 
-#: templates/main/dashboard.html:140 templates/pos/index.html:56
+#: templates/main/dashboard.html:140 templates/pos/index.html:59
 msgid "Open Cart"
 msgstr "Отворете количката"
 
@@ -3462,19 +3617,11 @@ msgstr "Системен език"
 msgid "Select the primary language for the application interface."
 msgstr "Изберете основния език за интерфейса на приложението."
 
-#: templates/onboarding/setup.html:76
-msgid "Primary Currency"
-msgstr "Основна валута"
-
-#: templates/onboarding/setup.html:84
-msgid "This will be used for all invoices and financial reports."
-msgstr "Това ще се използва за всички фактури и финансови отчети."
-
-#: templates/onboarding/setup.html:90
+#: templates/onboarding/setup.html:78
 msgid "You can change these settings later in the Admin Panel."
 msgstr "Можете да промените тези настройки по-късно в административния панел."
 
-#: templates/onboarding/setup.html:94
+#: templates/onboarding/setup.html:82
 msgid "Complete Setup & Launch Dashboard"
 msgstr "Завършете настройката и стартирайте таблото за управление"
 
@@ -3498,8 +3645,8 @@ msgstr "Търсете по име или SKU..."
 msgid "SKU / Barcode"
 msgstr "SKU / Баркод"
 
-#: templates/parts/manage_parts.html:53 templates/parts/manage_parts.html:151
-#: templates/parts/manage_parts.html:208 templates/pos/index.html:113
+#: templates/parts/manage_parts.html:53 templates/parts/manage_parts.html:152
+#: templates/parts/manage_parts.html:209 templates/pos/index.html:116
 msgid "Part Name"
 msgstr "Име на част"
 
@@ -3507,13 +3654,13 @@ msgstr "Име на част"
 msgid "Cost (Wholesale)"
 msgstr "Цена (на едро)"
 
-#: templates/parts/manage_parts.html:57 templates/parts/manage_parts.html:167
-#: templates/parts/manage_parts.html:224 templates/parts/manage_parts.html:352
-#: templates/tickets/ticket_detail.html:510
+#: templates/parts/manage_parts.html:57 templates/parts/manage_parts.html:168
+#: templates/parts/manage_parts.html:225 templates/parts/manage_parts.html:353
+#: templates/tickets/ticket_detail.html:569
 msgid "Selling Price"
 msgstr "Продажна цена"
 
-#: templates/parts/manage_parts.html:58 templates/pos/cart.html:75
+#: templates/parts/manage_parts.html:58
 msgid "Stock"
 msgstr "Наличност"
 
@@ -3525,231 +3672,78 @@ msgstr "Последно движение"
 msgid "View Price History"
 msgstr "Преглед на историята на цените"
 
-#: templates/parts/manage_parts.html:109 templates/parts/manage_parts.html:142
+#: templates/parts/manage_parts.html:101 templates/parts/manage_parts.html:143
 msgid "Edit Part Details"
 msgstr "Редактиране на подробностите за частта"
 
-#: templates/parts/manage_parts.html:111
+#: templates/parts/manage_parts.html:112
 msgid "Are you sure you want to permanently delete this part?"
 msgstr "Сигурни ли сте, че искате да изтриете тази част за постоянно?"
 
-#: templates/parts/manage_parts.html:113
+#: templates/parts/manage_parts.html:114
 msgid "Delete Part"
 msgstr "Изтриване на част"
 
-#: templates/parts/manage_parts.html:122
+#: templates/parts/manage_parts.html:123
 msgid "No spare parts found matching your search."
 msgstr "Няма намерени резервни части, отговарящи на вашето търсене."
 
-#: templates/parts/manage_parts.html:122
+#: templates/parts/manage_parts.html:123
 msgid "No spare parts found in inventory."
 msgstr "Няма намерени резервни части в инвентара."
 
-#: templates/parts/manage_parts.html:147 templates/parts/manage_parts.html:204
+#: templates/parts/manage_parts.html:148 templates/parts/manage_parts.html:205
 msgid "SKU / Barcode ID"
 msgstr "SKU / ID на баркод"
 
-#: templates/parts/manage_parts.html:148 templates/parts/manage_parts.html:205
+#: templates/parts/manage_parts.html:149 templates/parts/manage_parts.html:206
 msgid "Optional barcode or SKU"
 msgstr "Баркод или SKU по избор"
 
-#: templates/parts/manage_parts.html:160 templates/parts/manage_parts.html:217
-#: templates/parts/manage_parts.html:344
-#: templates/tickets/ticket_detail.html:500
+#: templates/parts/manage_parts.html:161 templates/parts/manage_parts.html:218
+#: templates/parts/manage_parts.html:345
+#: templates/tickets/ticket_detail.html:559
 msgid "Wholesale Cost"
 msgstr "Цена на едро"
 
-#: templates/parts/manage_parts.html:175
+#: templates/parts/manage_parts.html:176
 msgid "Stock Quantity"
 msgstr "Количество на склад"
 
-#: templates/parts/manage_parts.html:199
+#: templates/parts/manage_parts.html:200
 msgid "Add New Item"
 msgstr "Добавяне на нов артикул"
 
-#: templates/parts/manage_parts.html:209
+#: templates/parts/manage_parts.html:210
 msgid "e.g. iPhone 13 Screen"
 msgstr "напр. Екран на iPhone 13"
 
-#: templates/parts/manage_parts.html:220
+#: templates/parts/manage_parts.html:221
 msgid "Your cost"
 msgstr "Вашата цена"
 
-#: templates/parts/manage_parts.html:227
+#: templates/parts/manage_parts.html:228
 msgid "Customer price"
 msgstr "Цена на клиента"
 
-#: templates/parts/manage_parts.html:232
+#: templates/parts/manage_parts.html:233
 msgid "Initial Stock"
 msgstr "Първоначален запас"
 
-#: templates/parts/manage_parts.html:238
+#: templates/parts/manage_parts.html:239
 msgid "Add to Inventory"
 msgstr "Добавяне към инвентара"
 
-#: templates/parts/manage_parts.html:250
+#: templates/parts/manage_parts.html:251
 msgid "Price & Cost Trends"
 msgstr "Тенденции в цените и разходите"
 
-#: templates/parts/manage_parts.html:259
+#: templates/parts/manage_parts.html:260
 msgid "No historical data points found for this part."
 msgstr "Няма намерени точки с исторически данни за тази част."
 
-#: templates/pos/cart.html:3
-msgid "Checkout"
-msgstr "Плащане"
-
-#: templates/pos/cart.html:9
-msgid "Sale Details"
-msgstr "Подробности за продажбата"
-
-#: templates/pos/cart.html:9
-msgid "Current Sale"
-msgstr "Текуща разпродажба"
-
-#: templates/pos/cart.html:12
-msgid ""
-"Are you sure you want to cancel and permanently delete this draft sale? This"
-" will restore any reserved stock."
-msgstr ""
-"Сигурни ли сте, че искате да анулирате и изтриете за постоянно тази чернова "
-"на продажба? Това ще възстанови всички запазени запаси."
-
-#: templates/pos/cart.html:14 templates/pos/cart.html:15
-msgid "Cancel Sale"
-msgstr "Отказ от продажба"
-
-#: templates/pos/cart.html:20
-msgid "Back to POS"
-msgstr "Обратно към POS"
-
-#: templates/pos/cart.html:36
-msgid "Scan Barcode / Enter SKU to Quick Add..."
-msgstr "Сканиране на баркод / ​​Въведете SKU за бързо добавяне..."
-
-#: templates/pos/cart.html:44
-msgid "Add Items to Sale"
-msgstr "Добавете артикули към разпродажба"
-
-#: templates/pos/cart.html:55
-msgid "Select Service"
-msgstr "Изберете услуга"
-
-#: templates/pos/cart.html:62 templates/tickets/ticket_detail.html:101
-#: templates/tickets/ticket_detail.html:459
-msgid "Add Service"
-msgstr "Добавете услуга"
-
-#: templates/pos/cart.html:71
-msgid "Spare Part"
-msgstr "Резервна част"
-
-#: templates/pos/cart.html:73
-msgid "Select Part"
-msgstr "Изберете част"
-
-#: templates/pos/cart.html:80 templates/tickets/ticket_detail.html:104
-#: templates/tickets/ticket_detail.html:528
-msgid "Add Part"
-msgstr "Добавете част"
-
-#: templates/pos/cart.html:98 templates/services/manage_services.html:54
-#: templates/services/manage_services.html:125
-#: templates/services/manage_services.html:165
-#: templates/tickets/ticket_detail.html:115
-msgid "Price"
-msgstr "Цена"
-
-#: templates/pos/cart.html:112
-msgid "Repair Service"
-msgstr "Сервиз за ремонт"
-
-#: templates/pos/cart.html:121
-msgid "Remove service from cart?"
-msgstr "Премахване на услугата от количката?"
-
-#: templates/pos/cart.html:123 templates/pos/cart.html:151
-msgid "Remove"
-msgstr "Премахнете"
-
-#: templates/pos/cart.html:136 templates/tickets/ticket_detail.html:143
-msgid "Part"
-msgstr "Част"
-
-#: templates/pos/cart.html:149
-msgid "Remove item from cart?"
-msgstr "Да се ​​премахне ли артикулът от количката?"
-
-#: templates/pos/cart.html:161
-msgid "Cart is empty. Add items above to proceed."
-msgstr "Количката е празна. Добавете елементи по-горе, за да продължите."
-
-#: templates/pos/cart.html:176
-msgid "Sale Summary"
-msgstr "Резюме на продажбата"
-
-#: templates/pos/cart.html:176
-msgid "Summary & Payment"
-msgstr "Резюме и плащане"
-
-#: templates/pos/cart.html:185
-msgid "Invoice Number"
-msgstr "Номер на фактура"
-
-#: templates/pos/cart.html:194
-msgid "Total Paid"
-msgstr "Общо платено"
-
-#: templates/pos/cart.html:194
-msgid "Total Due"
-msgstr "Общо дължимо"
-
-#: templates/pos/cart.html:206
-msgid "Amount to Pay"
-msgstr "Сума за плащане"
-
-#: templates/pos/cart.html:215 templates/tickets/new_ticket.html:102
-#: templates/tickets/ticket_detail.html:407
-msgid "Payment Method"
-msgstr "Начин на плащане"
-
-#: templates/pos/cart.html:217 templates/tickets/new_ticket.html:104
-#: templates/tickets/ticket_detail.html:409
-msgid "Cash"
-msgstr "Парични средства"
-
-#: templates/pos/cart.html:218 templates/tickets/new_ticket.html:105
-#: templates/tickets/ticket_detail.html:410
-msgid "Card"
-msgstr "карта"
-
-#: templates/pos/cart.html:219 templates/tickets/new_ticket.html:106
-#: templates/tickets/ticket_detail.html:411
-msgid "Bank Transfer"
-msgstr "Банков превод"
-
-#: templates/pos/cart.html:225
-msgid "Reference / Notes"
-msgstr "Справка / Бележки"
-
-#: templates/pos/cart.html:226
-msgid "Optional reference #"
-msgstr "Незадължителен референтен номер"
-
-#: templates/pos/cart.html:232
-msgid "Process Sale"
-msgstr "Процес на продажба"
-
-#: templates/pos/cart.html:238
-msgid "Transaction Completed"
-msgstr "Транзакцията е завършена"
-
-#: templates/pos/cart.html:254
-msgid "Processing..."
-msgstr "Обработва се..."
-
 #: templates/pos/history.html:4 templates/pos/history.html:9
-#: templates/pos/index.html:24
+#: templates/pos/index.html:25
 msgid "Sales History"
 msgstr "История на продажбите"
 
@@ -3757,20 +3751,21 @@ msgstr "История на продажбите"
 msgid "Back to Sales"
 msgstr "Обратно към Продажби"
 
-#: templates/pos/history.html:37
+#: templates/pos/history.html:37 templates/reports/finance_report.html:116
+#: templates/reports/finance_report.html:192
 msgid "Invoice #"
 msgstr "Фактура №"
 
-#: templates/pos/history.html:58 templates/reports/reports.html:112
+#: templates/pos/history.html:58 templates/reports/reports.html:124
 msgid "Repair"
 msgstr "Ремонт"
 
-#: templates/pos/history.html:60 templates/reports/finance_report.html:205
-#: templates/reports/reports.html:107
+#: templates/pos/history.html:60 templates/reports/finance_report.html:251
+#: templates/reports/reports.html:118
 msgid "Direct Sale"
 msgstr "Директна продажба"
 
-#: templates/pos/history.html:74 templates/reports/reports.html:123
+#: templates/pos/history.html:74 templates/reports/reports.html:141
 msgid "View Invoice"
 msgstr "Вижте фактура"
 
@@ -3796,48 +3791,44 @@ msgstr "Изтриване на чернова"
 msgid "No sales records found."
 msgstr "Няма намерени записи за продажби."
 
-#: templates/pos/index.html:4
-msgid "POS Dashboard"
-msgstr "POS табло"
-
-#: templates/pos/index.html:9
+#: templates/pos/index.html:4 templates/pos/index.html:9
 msgid "POS Terminal"
 msgstr "ПОС терминал"
 
-#: templates/pos/index.html:50
+#: templates/pos/index.html:53
 msgid "Choose a customer or leave empty for a \"Walk-in\" sale."
 msgstr "Изберете клиент или оставете празно за продажба „на гости“."
 
-#: templates/pos/index.html:59
+#: templates/pos/index.html:62
 msgid "Quick Add Customer"
 msgstr "Бързо добавяне на клиент"
 
-#: templates/pos/index.html:71
+#: templates/pos/index.html:74
 msgid "Available Inventory & Services"
 msgstr "Наличен инвентар и услуги"
 
-#: templates/pos/index.html:81
+#: templates/pos/index.html:84
 msgid "Service Description"
 msgstr "Описание на услугата"
 
-#: templates/pos/index.html:82 templates/pos/index.html:115
-#: templates/reports/finance_report.html:174
+#: templates/pos/index.html:85 templates/pos/index.html:118
+#: templates/reports/finance_report.html:198
 msgid "Unit Price"
 msgstr "Единична цена"
 
-#: templates/pos/index.html:96
+#: templates/pos/index.html:99
 msgid "No services available at this location."
 msgstr "Няма налични услуги на това място."
 
-#: templates/pos/index.html:107
+#: templates/pos/index.html:110
 msgid "Spare Parts"
 msgstr "Резервни части"
 
-#: templates/pos/index.html:114
+#: templates/pos/index.html:117
 msgid "In Stock"
 msgstr "В наличност"
 
-#: templates/pos/index.html:133
+#: templates/pos/index.html:136
 msgid "No spare parts available at this location."
 msgstr "Няма налични резервни части на това място."
 
@@ -3850,12 +3841,12 @@ msgid "Financial Analytics"
 msgstr "Финансов анализ"
 
 #: templates/reports/finance_report.html:21
-#: templates/tickets/ticket_detail.html:226
+#: templates/tickets/ticket_detail.html:285
 msgid "From"
 msgstr "от"
 
 #: templates/reports/finance_report.html:23
-#: templates/tickets/ticket_detail.html:227
+#: templates/tickets/ticket_detail.html:286
 msgid "To"
 msgstr "до"
 
@@ -3904,51 +3895,63 @@ msgstr "История на плащанията на клиента"
 msgid "Date & Time"
 msgstr "Дата и час"
 
-#: templates/reports/finance_report.html:117
-#: templates/tickets/invoice.html:163 templates/tickets/ticket_detail.html:259
+#: templates/reports/finance_report.html:118
+#: templates/tickets/invoice.html:176 templates/tickets/ticket_detail.html:318
 msgid "Method"
 msgstr "Метод"
 
-#: templates/reports/finance_report.html:118 templates/reports/reports.html:88
-#: templates/tickets/ticket_detail.html:260
+#: templates/reports/finance_report.html:119 templates/reports/reports.html:88
+#: templates/tickets/ticket_detail.html:319
 msgid "Reference"
 msgstr "справка"
 
-#: templates/reports/finance_report.html:119
-#: templates/tickets/invoice.html:164 templates/tickets/ticket_detail.html:258
+#: templates/reports/finance_report.html:120
+#: templates/tickets/invoice.html:177 templates/tickets/ticket_detail.html:317
 msgid "Amount"
 msgstr "Сума"
 
-#: templates/reports/finance_report.html:142
-#: templates/reports/reports.html:114
+#: templates/reports/finance_report.html:145
+#: templates/reports/finance_report.html:236
+#: templates/reports/reports.html:106
+#, fuzzy
+msgid "Print Receipt"
+msgstr "разписка"
+
+#: templates/reports/finance_report.html:160
+#: templates/reports/reports.html:128
 msgid "POS Sale"
 msgstr "POS продажба"
 
-#: templates/reports/finance_report.html:151
+#: templates/reports/finance_report.html:172
 msgid "No payment records found."
 msgstr "Няма намерени записи за плащания."
 
-#: templates/reports/finance_report.html:161
+#: templates/reports/finance_report.html:182
 msgid "Material Usage & Hardware Tracking"
 msgstr "Използване на материали и проследяване на хардуер"
 
-#: templates/reports/finance_report.html:162
+#: templates/reports/finance_report.html:183
 msgid "Includes Inventory & Manual Items"
 msgstr "Включва инвентар и ръчни артикули"
 
-#: templates/reports/finance_report.html:168
+#: templates/reports/finance_report.html:189
 msgid "Item Description"
 msgstr "Описание на елемента"
 
-#: templates/reports/finance_report.html:173
+#: templates/reports/finance_report.html:196
 msgid "Unit Cost"
 msgstr "Единична цена"
 
-#: templates/reports/finance_report.html:188
+#: templates/reports/finance_report.html:201
+#, fuzzy
+msgid "Profit"
+msgstr "Нетна печалба"
+
+#: templates/reports/finance_report.html:218
 msgid "Manual Entry"
 msgstr "Ръчно въвеждане"
 
-#: templates/reports/finance_report.html:214
+#: templates/reports/finance_report.html:268
 msgid "No materials recorded yet."
 msgstr "Все още няма записани материали."
 
@@ -3992,7 +3995,12 @@ msgstr "Подробности"
 msgid "Type / Status"
 msgstr "Тип / Статус"
 
-#: templates/reports/reports.html:130
+#: templates/reports/reports.html:102
+#, fuzzy
+msgid "View PDF Invoice"
+msgstr "Вижте фактура"
+
+#: templates/reports/reports.html:148
 msgid "No recent activity found."
 msgstr "Няма намерена скорошна активност."
 
@@ -4012,65 +4020,78 @@ msgstr "Нова услуга"
 msgid "Search services..."
 msgstr "Услуги за търсене..."
 
-#: templates/services/manage_services.html:53
-#: templates/services/manage_services.html:117
-#: templates/services/manage_services.html:157
+#: templates/services/manage_services.html:47
+#: templates/services/manage_services.html:112
+#: templates/services/manage_services.html:152
 msgid "Service Name"
 msgstr "Име на услугата"
 
-#: templates/services/manage_services.html:82
-#: templates/services/manage_services.html:112
+#: templates/services/manage_services.html:48
+#: templates/services/manage_services.html:120
+#: templates/services/manage_services.html:160
+#: templates/tickets/ticket_detail.html:138
+msgid "Price"
+msgstr "Цена"
+
+#: templates/services/manage_services.html:76
+#: templates/services/manage_services.html:107
 msgid "Edit Service"
 msgstr "Редактиране на услугата"
 
-#: templates/services/manage_services.html:84
+#: templates/services/manage_services.html:79
 msgid "Are you sure you want to permanently delete this service?"
 msgstr "Сигурни ли сте, че искате да изтриете тази услуга за постоянно?"
 
-#: templates/services/manage_services.html:86
+#: templates/services/manage_services.html:81
 msgid "Delete Service"
 msgstr "Изтриване на услугата"
 
-#: templates/services/manage_services.html:94
+#: templates/services/manage_services.html:89
 msgid "No services found matching your criteria."
 msgstr "Няма намерени услуги, отговарящи на вашите критерии."
 
-#: templates/services/manage_services.html:94
+#: templates/services/manage_services.html:89
 msgid "No services defined."
 msgstr "Няма дефинирани услуги."
 
-#: templates/services/manage_services.html:152
+#: templates/services/manage_services.html:147
 msgid "Add New Service Type"
 msgstr "Добавете нов тип услуга"
 
-#: templates/services/manage_services.html:158
+#: templates/services/manage_services.html:153
 msgid "e.g. Screen Replacement"
 msgstr "напр. Смяна на екрана"
 
-#: templates/services/manage_services.html:168
+#: templates/services/manage_services.html:163
 msgid "Service price"
 msgstr "Цена на услугата"
 
-#: templates/services/manage_services.html:174
+#: templates/services/manage_services.html:169
 msgid "Create Service"
 msgstr "Създаване на услуга"
 
 #: templates/tickets/archive_ticket.html:3
-#: templates/tickets/archive_ticket.html:32
-#: templates/tickets/ticket_detail.html:54
+#: templates/tickets/archive_ticket.html:35
+#: templates/tickets/ticket_detail.html:57
 msgid "Archive Ticket"
 msgstr "Билет за архив"
 
 #: templates/tickets/archive_ticket.html:10
-msgid "Confirm Archiving Ticket"
-msgstr "Потвърдете билета за архивиране"
+#: templates/tickets/edit_ticket.html:8 templates/tickets/invoice.html:255
+msgid "Back to Ticket"
+msgstr "Назад към Билет"
 
-#: templates/tickets/archive_ticket.html:14
+#: templates/tickets/archive_ticket.html:13
+#, fuzzy, python-format
+msgid "Archive Ticket: %(num)s"
+msgstr "Редактиране на билет: %(num)s"
+
+#: templates/tickets/archive_ticket.html:17
 #, python-format
 msgid "Are you sure you want to archive ticket %(num)s?"
 msgstr "Сигурни ли сте, че искате да архивирате билет %(num)s?"
 
-#: templates/tickets/archive_ticket.html:18
+#: templates/tickets/archive_ticket.html:21
 msgid ""
 "Archiving this ticket will remove it from active lists. It will still be "
 "accessible in history/reporting."
@@ -4078,11 +4099,11 @@ msgstr ""
 "Архивирането на този билет ще го премахне от активните списъци. Той все още "
 "ще бъде достъпен в историята/отчитането."
 
-#: templates/tickets/archive_ticket.html:24
+#: templates/tickets/archive_ticket.html:27
 msgid "Current Phase:"
 msgstr "Текуща фаза:"
 
-#: templates/tickets/archive_ticket.html:25
+#: templates/tickets/archive_ticket.html:28
 msgid "Outstanding Balance:"
 msgstr "Неплатено салдо:"
 
@@ -4091,16 +4112,16 @@ msgstr "Неплатено салдо:"
 msgid "Edit Ticket: %(num)s"
 msgstr "Редактиране на билет: %(num)s"
 
-#: templates/tickets/edit_ticket.html:8
+#: templates/tickets/edit_ticket.html:11
 #, fuzzy, python-format
 msgid "Edit Repair Ticket: %(num)s"
 msgstr "Редактиране на билет за поправка: %(num)s"
 
-#: templates/tickets/edit_ticket.html:13
+#: templates/tickets/edit_ticket.html:16
 msgid "Note:"
 msgstr "Забележка:"
 
-#: templates/tickets/edit_ticket.html:13
+#: templates/tickets/edit_ticket.html:16
 msgid ""
 "This ticket is archived (Already Taken). You are editing it with "
 "administrative privileges."
@@ -4108,36 +4129,36 @@ msgstr ""
 "Този билет е архивиран (Вече взет). Вие го редактирате с администраторски "
 "права."
 
-#: templates/tickets/edit_ticket.html:35 templates/tickets/new_ticket.html:51
+#: templates/tickets/edit_ticket.html:38 templates/tickets/new_ticket.html:58
 msgid "Problem & Intake Details"
 msgstr "Подробности за проблема и приема"
 
-#: templates/tickets/edit_ticket.html:40 templates/tickets/new_ticket.html:69
+#: templates/tickets/edit_ticket.html:43 templates/tickets/new_ticket.html:76
 msgid "Items Included (Charger, Case, etc.)"
 msgstr "Включени артикули (зарядно устройство, калъф и др.)"
 
-#: templates/tickets/edit_ticket.html:41 templates/tickets/new_ticket.html:70
+#: templates/tickets/edit_ticket.html:44 templates/tickets/new_ticket.html:77
 msgid "e.g., Original Charger, Leather Case"
 msgstr "напр. оригинално зарядно устройство, кожен калъф"
 
-#: templates/tickets/edit_ticket.html:46 templates/tickets/new_ticket.html:65
+#: templates/tickets/edit_ticket.html:49 templates/tickets/new_ticket.html:72
 msgid "Describe the issue in detail..."
 msgstr "Опишете проблема подробно..."
 
-#: templates/tickets/edit_ticket.html:50 templates/tickets/new_ticket.html:74
+#: templates/tickets/edit_ticket.html:53 templates/tickets/new_ticket.html:81
 msgid "Technician Assignment"
 msgstr "Назначаване на техник"
 
-#: templates/tickets/edit_ticket.html:52 templates/tickets/new_ticket.html:76
+#: templates/tickets/edit_ticket.html:55 templates/tickets/new_ticket.html:83
 msgid "-- Unassigned --"
 msgstr "-- Неприсвоен --"
 
-#: templates/tickets/edit_ticket.html:60 templates/tickets/new_ticket.html:84
+#: templates/tickets/edit_ticket.html:63 templates/tickets/new_ticket.html:91
 #, fuzzy
 msgid "Tax Options"
 msgstr "Всички местоположения"
 
-#: templates/tickets/edit_ticket.html:64 templates/tickets/new_ticket.html:88
+#: templates/tickets/edit_ticket.html:67 templates/tickets/new_ticket.html:95
 #, python-format
 msgid "Include %(label)s"
 msgstr "Включете %(label)s"
@@ -4155,97 +4176,105 @@ msgstr "Фактура"
 msgid "%(label)s: %(num)s"
 msgstr "%(label)s : %(num)s"
 
-#: templates/tickets/invoice.html:27
+#: templates/tickets/invoice.html:28
 #, fuzzy
 msgid "DRAFT"
 msgstr "Дата"
 
-#: templates/tickets/invoice.html:38
+#: templates/tickets/invoice.html:39
 #, fuzzy
 msgid "From:"
 msgstr "от"
 
-#: templates/tickets/invoice.html:46
+#: templates/tickets/invoice.html:47
 #, fuzzy
 msgid "System Generated Document"
 msgstr "Системно генерирана фактура"
 
-#: templates/tickets/invoice.html:56
-msgid "Bill To:"
+#: templates/tickets/invoice.html:57
+#, fuzzy
+msgid "Bill To"
 msgstr "Фактуриране до:"
 
-#: templates/tickets/invoice.html:73
+#: templates/tickets/invoice.html:74
 msgid "Device Info:"
 msgstr "Информация за устройството:"
 
-#: templates/tickets/invoice.html:80
+#: templates/tickets/invoice.html:81
 msgid "Direct Sale / Point of Purchase"
 msgstr "Директна продажба / точка на покупка"
 
-#: templates/tickets/invoice.html:82
+#: templates/tickets/invoice.html:83
 msgid "Ticket:"
 msgstr "Билет:"
 
-#: templates/tickets/invoice.html:108
+#: templates/tickets/invoice.html:109
 msgid "Part/Material"
 msgstr "Част/Материал"
 
-#: templates/tickets/invoice.html:132
+#: templates/tickets/invoice.html:133
 #, python-format
 msgid "%(label)s (%(rate)s%%):"
 msgstr "%(label)s ( %(rate)s %%):"
 
-#: templates/tickets/invoice.html:142 templates/tickets/ticket_detail.html:252
+#: templates/tickets/invoice.html:155 templates/tickets/ticket_detail.html:311
 msgid "Total Paid:"
 msgstr "Общо платено:"
 
-#: templates/tickets/invoice.html:148 templates/tickets/ticket_detail.html:206
+#: templates/tickets/invoice.html:161 templates/tickets/ticket_detail.html:267
+#: templates/tickets/ticket_detail.html:268
 msgid "Change Due:"
 msgstr "Дължима промяна:"
 
-#: templates/tickets/invoice.html:157 templates/tickets/ticket_detail.html:251
+#: templates/tickets/invoice.html:170 templates/tickets/ticket_detail.html:310
 msgid "Payment History"
 msgstr "История на плащанията"
 
-#: templates/tickets/invoice.html:188
+#: templates/tickets/invoice.html:197
+msgid "Points Earned this visit:"
+msgstr "Точки, спечелени от това посещение:"
+
+#: templates/tickets/invoice.html:197 templates/tickets/ticket_detail.html:208
+#: templates/tickets/ticket_detail.html:255
+#, fuzzy
+msgid "pts"
+msgstr "Доклади"
+
+#: templates/tickets/invoice.html:208
 #, fuzzy
 msgid "Repair Notes"
 msgstr "Билети за ремонт"
 
-#: templates/tickets/invoice.html:200
+#: templates/tickets/invoice.html:220
 #, fuzzy
 msgid "Payment Instructions"
 msgstr "История на плащанията"
 
-#: templates/tickets/invoice.html:211
+#: templates/tickets/invoice.html:231
 #, python-format
 msgid "%(label)s Notes:"
 msgstr "%(label)s Бележки:"
 
-#: templates/tickets/invoice.html:211
+#: templates/tickets/invoice.html:231
 #, python-format
 msgid "%(label)s Terms & Conditions:"
 msgstr "%(label)s Правила и условия:"
 
-#: templates/tickets/invoice.html:235
-msgid "Back to Ticket"
-msgstr "Назад към Билет"
-
-#: templates/tickets/invoice.html:240 templates/tickets/ticket_detail.html:42
+#: templates/tickets/invoice.html:260 templates/tickets/ticket_detail.html:45
 msgid "Download PDF"
 msgstr "Изтеглете PDF"
 
-#: templates/tickets/invoice.html:243
+#: templates/tickets/invoice.html:263
 #, fuzzy
 msgid "Download Invoice"
 msgstr "Вижте фактура"
 
-#: templates/tickets/invoice.html:245
+#: templates/tickets/invoice.html:265
 #, fuzzy
 msgid "Download Receipt"
 msgstr "Изтеглете PDF"
 
-#: templates/tickets/invoice.html:252
+#: templates/tickets/invoice.html:272
 msgid "Print Document"
 msgstr "Печат на документ"
 
@@ -4253,11 +4282,11 @@ msgstr "Печат на документ"
 msgid "Create New Ticket"
 msgstr "Създаване на нов билет"
 
-#: templates/tickets/new_ticket.html:8
+#: templates/tickets/new_ticket.html:11
 msgid "New Repair Ticket"
 msgstr "Нов билет за ремонт"
 
-#: templates/tickets/new_ticket.html:12
+#: templates/tickets/new_ticket.html:15
 msgid ""
 "Please select a customer and a device from the search results before "
 "creating the ticket."
@@ -4265,93 +4294,123 @@ msgstr ""
 "Моля, изберете клиент и устройство от резултатите от търсенето, преди да "
 "създадете билета."
 
-#: templates/tickets/new_ticket.html:17
+#: templates/tickets/new_ticket.html:20
 msgid "1. Search Customer"
 msgstr "1. Търсене на клиент"
 
-#: templates/tickets/new_ticket.html:20
+#: templates/tickets/new_ticket.html:24
 msgid "Type name or phone..."
 msgstr "Въведете име или телефон..."
 
-#: templates/tickets/new_ticket.html:23 templates/tickets/new_ticket.html:43
-msgid "New"
-msgstr "Нов"
-
-#: templates/tickets/new_ticket.html:32
-msgid "2. Select Device"
-msgstr "2. Изберете Устройство"
-
-#: templates/tickets/new_ticket.html:36
-msgid "Search customer's devices..."
-msgstr "Търсене на устройства на клиента..."
-
-#: templates/tickets/new_ticket.html:37
+#: templates/tickets/new_ticket.html:25 templates/tickets/new_ticket.html:44
 msgid "Searching..."
 msgstr "Търсене..."
 
+#: templates/tickets/new_ticket.html:27
+#, fuzzy
+msgid "Search failed."
+msgstr "Търсене..."
+
+#: templates/tickets/new_ticket.html:30 templates/tickets/new_ticket.html:50
+msgid "New"
+msgstr "Нов"
+
 #: templates/tickets/new_ticket.html:39
+msgid "2. Select Device"
+msgstr "2. Изберете Устройство"
+
+#: templates/tickets/new_ticket.html:43
+msgid "Search customer's devices..."
+msgstr "Търсене на устройства на клиента..."
+
+#: templates/tickets/new_ticket.html:46
 msgid "No devices registered for this customer."
 msgstr "Няма регистрирани устройства за този клиент."
 
-#: templates/tickets/new_ticket.html:57
+#: templates/tickets/new_ticket.html:64
 msgid "Common Problems (Quick Select)"
 msgstr "Често срещани проблеми (Бърз избор)"
 
-#: templates/tickets/new_ticket.html:107
-#: templates/tickets/ticket_detail.html:412
+#: templates/tickets/new_ticket.html:109
+#: templates/tickets/ticket_detail.html:466
+msgid "Payment Method"
+msgstr "Начин на плащане"
+
+#: templates/tickets/new_ticket.html:111
+#: templates/tickets/ticket_detail.html:468
+msgid "Cash"
+msgstr "Парични средства"
+
+#: templates/tickets/new_ticket.html:112
+#: templates/tickets/ticket_detail.html:469
+msgid "Card"
+msgstr "карта"
+
+#: templates/tickets/new_ticket.html:113
+#: templates/tickets/ticket_detail.html:470
+msgid "Bank Transfer"
+msgstr "Банков превод"
+
+#: templates/tickets/new_ticket.html:114
+#: templates/tickets/ticket_detail.html:471
 msgid "Check"
 msgstr "Проверете"
 
-#: templates/tickets/new_ticket.html:113
+#: templates/tickets/new_ticket.html:120
 msgid "Intake Date/Time"
 msgstr "Дата/час на приемане"
 
-#: templates/tickets/new_ticket.html:115
+#: templates/tickets/new_ticket.html:122
 msgid "Intake Date"
 msgstr "Дата на прием"
 
-#: templates/tickets/new_ticket.html:116
+#: templates/tickets/new_ticket.html:123
 msgid "Intake Time"
 msgstr "Време на прием"
 
 #: templates/tickets/ticket_detail.html:2
-#: templates/tickets/ticket_detail.html:7
+#: templates/tickets/ticket_detail.html:9
 #, fuzzy, python-format
 msgid "Ticket: %(num)s"
 msgstr "Билет: %(num)s"
 
-#: templates/tickets/ticket_detail.html:10
+#: templates/tickets/ticket_detail.html:8
+#, fuzzy
+msgid "Back to Ticket List"
+msgstr "Назад към Билет"
+
+#: templates/tickets/ticket_detail.html:13
 msgid "Ticket Locked"
 msgstr "Билетът е заключен"
 
-#: templates/tickets/ticket_detail.html:13
-#: templates/tickets/ticket_detail.html:346
+#: templates/tickets/ticket_detail.html:16
+#: templates/tickets/ticket_detail.html:405
 msgid "Update Phase"
 msgstr "Фаза на актуализиране"
 
-#: templates/tickets/ticket_detail.html:16
-#: templates/tickets/ticket_detail.html:360
-#: templates/tickets/ticket_detail.html:424
+#: templates/tickets/ticket_detail.html:19
+#: templates/tickets/ticket_detail.html:419
+#: templates/tickets/ticket_detail.html:483
 msgid "Record Payment"
 msgstr "Рекордно плащане"
 
-#: templates/tickets/ticket_detail.html:18
+#: templates/tickets/ticket_detail.html:21
 msgid "Edit Ticket Details"
 msgstr "Редактиране на подробностите за билета"
 
-#: templates/tickets/ticket_detail.html:28
+#: templates/tickets/ticket_detail.html:31
 msgid "Create Invoice"
 msgstr "Създаване на фактура"
 
-#: templates/tickets/ticket_detail.html:34
+#: templates/tickets/ticket_detail.html:37
 msgid "Finalize Invoice"
 msgstr "Финализиране на фактура"
 
-#: templates/tickets/ticket_detail.html:39
+#: templates/tickets/ticket_detail.html:42
 msgid "View Invoices"
 msgstr "Преглед на фактури"
 
-#: templates/tickets/ticket_detail.html:52
+#: templates/tickets/ticket_detail.html:55
 msgid ""
 "Archive this ticket? It will be removed from history lists but kept for "
 "financial reports."
@@ -4359,7 +4418,7 @@ msgstr ""
 "Архивиране на този билет? Той ще бъде премахнат от списъците с история, но "
 "ще бъде запазен за финансови отчети."
 
-#: templates/tickets/ticket_detail.html:60
+#: templates/tickets/ticket_detail.html:63
 msgid ""
 "ERASE TICKET: Are you sure? This will remove all history and records for "
 "this job."
@@ -4367,191 +4426,243 @@ msgstr ""
 "ИЗТРИВАНЕ НА БИЛЕТ: Сигурен ли си? Това ще премахне цялата история и записи "
 "за това задание."
 
-#: templates/tickets/ticket_detail.html:62
+#: templates/tickets/ticket_detail.html:65
 msgid "Delete Ticket"
 msgstr "Изтриване на билет"
 
-#: templates/tickets/ticket_detail.html:77
+#: templates/tickets/ticket_detail.html:80
 msgid "Color:"
 msgstr "цвят:"
 
-#: templates/tickets/ticket_detail.html:80
+#: templates/tickets/ticket_detail.html:83
 msgid "Created:"
 msgstr "Създаден:"
 
-#: templates/tickets/ticket_detail.html:81
+#: templates/tickets/ticket_detail.html:84
 #: templates/tickets/tickets_list.html:80
 msgid "Unassigned"
 msgstr "Неприсвоен"
 
-#: templates/tickets/ticket_detail.html:89
+#: templates/tickets/ticket_detail.html:88
+#, fuzzy
+msgid "Technical Specs"
+msgstr "Технически бележки"
+
+#: templates/tickets/ticket_detail.html:91
+#, fuzzy
+msgid "CPU:"
+msgstr "CPU"
+
+#: templates/tickets/ticket_detail.html:94
+#, fuzzy
+msgid "RAM:"
+msgstr "RAM"
+
+#: templates/tickets/ticket_detail.html:97
+#, fuzzy
+msgid "Storage:"
+msgstr "Съхранение"
+
+#: templates/tickets/ticket_detail.html:109
 msgid "Items Included"
 msgstr "Включени артикули"
 
-#: templates/tickets/ticket_detail.html:97
+#: templates/tickets/ticket_detail.html:117
 msgid "Services & Materials"
 msgstr "Услуги и материали"
 
+#: templates/tickets/ticket_detail.html:121
+#: templates/tickets/ticket_detail.html:518
+msgid "Add Service"
+msgstr "Добавете услуга"
+
 #: templates/tickets/ticket_detail.html:124
+#: templates/tickets/ticket_detail.html:587
+msgid "Add Part"
+msgstr "Добавете част"
+
+#: templates/tickets/ticket_detail.html:135
+msgid "SKU"
+msgstr "SKU"
+
+#: templates/tickets/ticket_detail.html:147
 msgid "Svc"
 msgstr "Svc"
 
-#: templates/tickets/ticket_detail.html:130
+#: templates/tickets/ticket_detail.html:156
 #, fuzzy
 msgid "Remove this service?"
 msgstr "Премахване на услугата?"
 
-#: templates/tickets/ticket_detail.html:132
+#: templates/tickets/ticket_detail.html:158
 #, fuzzy
 msgid "Remove Service"
 msgstr "Премахване на услугата"
 
-#: templates/tickets/ticket_detail.html:149
+#: templates/tickets/ticket_detail.html:170
+msgid "Part"
+msgstr "Част"
+
+#: templates/tickets/ticket_detail.html:183
 msgid "Remove this part from costs?"
 msgstr "Да се ​​премахне ли тази част от разходите?"
 
-#: templates/tickets/ticket_detail.html:151
+#: templates/tickets/ticket_detail.html:185
 msgid "Remove Part"
 msgstr "Премахване на част"
 
-#: templates/tickets/ticket_detail.html:161
+#: templates/tickets/ticket_detail.html:195
 msgid "No services or parts added yet."
 msgstr "Все още няма добавени услуги или части."
 
-#: templates/tickets/ticket_detail.html:170
+#: templates/tickets/ticket_detail.html:205
+#, fuzzy
+msgid "An error occurred while updating the summary."
+msgstr "Възникна грешка при актуализирането на устройството."
+
+#: templates/tickets/ticket_detail.html:207
+#, fuzzy
+msgid "Failed to update summary."
+msgstr "Неуспешно създаване на продажба."
+
+#: templates/tickets/ticket_detail.html:213
 msgid "Financial Summary"
 msgstr "Финансово резюме"
 
-#: templates/tickets/ticket_detail.html:172
+#: templates/tickets/ticket_detail.html:215
 msgid "Initial Estimate:"
 msgstr "Първоначална оценка:"
 
-#: templates/tickets/ticket_detail.html:177
+#: templates/tickets/ticket_detail.html:220
 msgid "Services:"
 msgstr "Услуги:"
 
-#: templates/tickets/ticket_detail.html:181
+#: templates/tickets/ticket_detail.html:224
 msgid "Materials:"
 msgstr "Материали:"
 
-#: templates/tickets/ticket_detail.html:221
+#: templates/tickets/ticket_detail.html:254
+msgid "to be earned"
+msgstr "да бъдат заслужени"
+
+#: templates/tickets/ticket_detail.html:280
 msgid "Phase History"
 msgstr "История на фазите"
 
-#: templates/tickets/ticket_detail.html:228
+#: templates/tickets/ticket_detail.html:287
 #: templates/tickets/tickets_list.html:64
 msgid "Technician"
 msgstr "техник"
 
-#: templates/tickets/ticket_detail.html:235
+#: templates/tickets/ticket_detail.html:294
 msgid "Intake"
 msgstr "Прием"
 
-#: templates/tickets/ticket_detail.html:261
+#: templates/tickets/ticket_detail.html:320
 msgid "Recorded By"
 msgstr "Записано от"
 
-#: templates/tickets/ticket_detail.html:275
+#: templates/tickets/ticket_detail.html:334
 msgid "Void this payment? This will update the invoice balance."
 msgstr "Анулиране на това плащане? Това ще актуализира баланса на фактурата."
 
-#: templates/tickets/ticket_detail.html:277
+#: templates/tickets/ticket_detail.html:336
 msgid "Void Payment"
 msgstr "Невалидно плащане"
 
-#: templates/tickets/ticket_detail.html:283
+#: templates/tickets/ticket_detail.html:342
 msgid "No payments recorded yet."
 msgstr "Все още няма регистрирани плащания."
 
-#: templates/tickets/ticket_detail.html:294
+#: templates/tickets/ticket_detail.html:353
 msgid "Notes & Timeline"
 msgstr "Бележки и времева линия"
 
-#: templates/tickets/ticket_detail.html:299
+#: templates/tickets/ticket_detail.html:358
 msgid "Internal"
 msgstr "Вътрешен"
 
-#: templates/tickets/ticket_detail.html:303
+#: templates/tickets/ticket_detail.html:362
 msgid "by"
 msgstr "от"
 
-#: templates/tickets/ticket_detail.html:306
+#: templates/tickets/ticket_detail.html:365
 msgid "No notes or timeline entries for this ticket."
 msgstr "Няма бележки или записи във времевата линия за този билет."
 
-#: templates/tickets/ticket_detail.html:321
+#: templates/tickets/ticket_detail.html:380
 msgid "Update Ticket Phase"
 msgstr "Актуализирайте фазата на билета"
 
-#: templates/tickets/ticket_detail.html:326
+#: templates/tickets/ticket_detail.html:385
 msgid "New Phase"
 msgstr "Нова фаза"
 
-#: templates/tickets/ticket_detail.html:328
+#: templates/tickets/ticket_detail.html:387
 msgid "-- Select Phase --"
 msgstr "-- Изберете фаза --"
 
-#: templates/tickets/ticket_detail.html:329
+#: templates/tickets/ticket_detail.html:388
 msgid "Open"
 msgstr "Отворете"
 
-#: templates/tickets/ticket_detail.html:330
+#: templates/tickets/ticket_detail.html:389
 msgid "Diagnostic"
 msgstr "Диагностика"
 
-#: templates/tickets/ticket_detail.html:331
+#: templates/tickets/ticket_detail.html:390
 msgid "Waiting for Parts"
 msgstr "В очакване на части"
 
-#: templates/tickets/ticket_detail.html:332
+#: templates/tickets/ticket_detail.html:391
 msgid "Repairing"
 msgstr "Ремонтиране"
 
-#: templates/tickets/ticket_detail.html:334
+#: templates/tickets/ticket_detail.html:393
 msgid "Fully Paid"
 msgstr "Напълно платено"
 
-#: templates/tickets/ticket_detail.html:335
+#: templates/tickets/ticket_detail.html:394
 msgid "Already Taken"
 msgstr "Вече заето"
 
-#: templates/tickets/ticket_detail.html:336
+#: templates/tickets/ticket_detail.html:395
 msgid "Cancelled"
 msgstr "Отменено"
 
-#: templates/tickets/ticket_detail.html:340
+#: templates/tickets/ticket_detail.html:399
 msgid "Technician Commentary (Optional)"
 msgstr "Технически коментар (по избор)"
 
-#: templates/tickets/ticket_detail.html:341
+#: templates/tickets/ticket_detail.html:400
 msgid "Describe the work done or reason for phase change..."
 msgstr "Опишете извършената работа или причината за промяна на фазата..."
 
-#: templates/tickets/ticket_detail.html:360
+#: templates/tickets/ticket_detail.html:419
 msgid "Return Change / Refund"
 msgstr "Връщане на промяна / възстановяване на сума"
 
-#: templates/tickets/ticket_detail.html:366
+#: templates/tickets/ticket_detail.html:425
 msgid "Overpayment / Change Due"
 msgstr "Надплащане / дължима промяна"
 
-#: templates/tickets/ticket_detail.html:366
+#: templates/tickets/ticket_detail.html:425
 msgid "Outstanding Balance"
 msgstr "Неплатено салдо"
 
-#: templates/tickets/ticket_detail.html:372
+#: templates/tickets/ticket_detail.html:431
 msgid "Amount to Record"
 msgstr "Сума за запис"
 
-#: templates/tickets/ticket_detail.html:382
+#: templates/tickets/ticket_detail.html:441
 msgid "Return All"
 msgstr "Връщане на всички"
 
-#: templates/tickets/ticket_detail.html:382
+#: templates/tickets/ticket_detail.html:441
 msgid "Pay Full"
 msgstr "Платете пълно"
 
-#: templates/tickets/ticket_detail.html:386
+#: templates/tickets/ticket_detail.html:445
 #, python-format
 msgid ""
 "Enter <strong>%(amount)s</strong> to record that the change was handed back "
@@ -4560,88 +4671,88 @@ msgstr ""
 "Въведете <strong> %(amount)s </strong>, за да запишете, че промяната е "
 "върната на клиента."
 
-#: templates/tickets/ticket_detail.html:392
+#: templates/tickets/ticket_detail.html:451
 msgid "Change Calculator"
 msgstr "Промяна на калкулатора"
 
-#: templates/tickets/ticket_detail.html:395
+#: templates/tickets/ticket_detail.html:454
 msgid "Cash Received"
 msgstr "Получени пари в брой"
 
-#: templates/tickets/ticket_detail.html:399
+#: templates/tickets/ticket_detail.html:458
 msgid "Change to Give"
 msgstr "Промяна на Давам"
 
-#: templates/tickets/ticket_detail.html:417
+#: templates/tickets/ticket_detail.html:476
 msgid "Transaction Reference (Optional)"
 msgstr "Справка за транзакцията (по избор)"
 
-#: templates/tickets/ticket_detail.html:418
+#: templates/tickets/ticket_detail.html:477
 msgid "E.g., Receipt #, Auth ID"
 msgstr "Напр. разписка №, ИД за удостоверяване"
 
-#: templates/tickets/ticket_detail.html:424
+#: templates/tickets/ticket_detail.html:483
 msgid "Record Return"
 msgstr "Запис Връщане"
 
-#: templates/tickets/ticket_detail.html:439
+#: templates/tickets/ticket_detail.html:498
 msgid "Add Repair Service"
 msgstr "Добавете услуга за ремонт"
 
-#: templates/tickets/ticket_detail.html:444
+#: templates/tickets/ticket_detail.html:503
 msgid "Service Type"
 msgstr "Тип услуга"
 
-#: templates/tickets/ticket_detail.html:446
+#: templates/tickets/ticket_detail.html:505
 msgid "-- Select Service --"
 msgstr "-- Изберете услуга --"
 
-#: templates/tickets/ticket_detail.html:453
-#: templates/tickets/ticket_detail.html:520
+#: templates/tickets/ticket_detail.html:512
+#: templates/tickets/ticket_detail.html:579
 msgid "Quantity"
 msgstr "Количество"
 
-#: templates/tickets/ticket_detail.html:473
+#: templates/tickets/ticket_detail.html:532
 msgid "Add Replaced Part"
 msgstr "Добавяне на заменена част"
 
-#: templates/tickets/ticket_detail.html:478
+#: templates/tickets/ticket_detail.html:537
 msgid "Quick Search SKU / Barcode"
 msgstr "Бързо търсене SKU / баркод"
 
-#: templates/tickets/ticket_detail.html:481
+#: templates/tickets/ticket_detail.html:540
 msgid "Scan or type SKU..."
 msgstr "Сканирайте или въведете SKU..."
 
-#: templates/tickets/ticket_detail.html:484
+#: templates/tickets/ticket_detail.html:543
 msgid "Inventory Item"
 msgstr "Инвентарен артикул"
 
-#: templates/tickets/ticket_detail.html:486
+#: templates/tickets/ticket_detail.html:545
 msgid "-- Or type manually below --"
 msgstr "-- Или въведете ръчно по-долу --"
 
-#: templates/tickets/ticket_detail.html:488
+#: templates/tickets/ticket_detail.html:547
 msgid "Stock:"
 msgstr "Наличност:"
 
-#: templates/tickets/ticket_detail.html:493
+#: templates/tickets/ticket_detail.html:552
 msgid "Manual Description"
 msgstr "Описание на ръководството"
 
-#: templates/tickets/ticket_detail.html:494
+#: templates/tickets/ticket_detail.html:553
 msgid "E.g. Custom Screw, Generic Cable"
 msgstr "напр. Персонализиран винт, универсален кабел"
 
-#: templates/tickets/ticket_detail.html:495
+#: templates/tickets/ticket_detail.html:554
 msgid "Required if not selecting from inventory."
 msgstr "Задължително, ако не избирате от инвентара."
 
-#: templates/tickets/ticket_detail.html:505
+#: templates/tickets/ticket_detail.html:564
 msgid "Optional for manual items."
 msgstr "По избор за ръчни елементи."
 
-#: templates/tickets/ticket_detail.html:515
+#: templates/tickets/ticket_detail.html:574
 msgid "Required for manual items."
 msgstr "Изисква се за ръчни елементи."
 
@@ -4752,3 +4863,113 @@ msgstr "Няма намерени билети за ремонт."
 
 #~ msgid "Remove part"
 #~ msgstr "Отстранете част"
+
+#~ msgid ""
+#~ "System configuration is out of sync. Please run \"flask seed\" to finalize "
+#~ "system updates."
+#~ msgstr ""
+#~ "Системната конфигурация не е синхронизирана. Моля, стартирайте \"flask "
+#~ "seed\", за да финализирате системните актуализации."
+
+#~ msgid "General"
+#~ msgstr "генерал"
+
+#~ msgid "Checkout"
+#~ msgstr "Плащане"
+
+#~ msgid "Sale Details"
+#~ msgstr "Подробности за продажбата"
+
+#~ msgid "Current Sale"
+#~ msgstr "Текуща разпродажба"
+
+#~ msgid ""
+#~ "Are you sure you want to cancel and permanently delete this draft sale? This"
+#~ " will restore any reserved stock."
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да анулирате и изтриете за постоянно тази чернова "
+#~ "на продажба? Това ще възстанови всички запазени запаси."
+
+#~ msgid "Cancel Sale"
+#~ msgstr "Отказ от продажба"
+
+#~ msgid "Back to POS"
+#~ msgstr "Обратно към POS"
+
+#~ msgid "Scan Barcode / Enter SKU to Quick Add..."
+#~ msgstr "Сканиране на баркод / ​​Въведете SKU за бързо добавяне..."
+
+#~ msgid "Add Items to Sale"
+#~ msgstr "Добавете артикули към разпродажба"
+
+#~ msgid "Select Service"
+#~ msgstr "Изберете услуга"
+
+#~ msgid "Spare Part"
+#~ msgstr "Резервна част"
+
+#~ msgid "Select Part"
+#~ msgstr "Изберете част"
+
+#~ msgid "Repair Service"
+#~ msgstr "Сервиз за ремонт"
+
+#~ msgid "Remove service from cart?"
+#~ msgstr "Премахване на услугата от количката?"
+
+#~ msgid "Remove"
+#~ msgstr "Премахнете"
+
+#~ msgid "Remove item from cart?"
+#~ msgstr "Да се ​​премахне ли артикулът от количката?"
+
+#~ msgid "Cart is empty. Add items above to proceed."
+#~ msgstr "Количката е празна. Добавете елементи по-горе, за да продължите."
+
+#~ msgid "Sale Summary"
+#~ msgstr "Резюме на продажбата"
+
+#~ msgid "Summary & Payment"
+#~ msgstr "Резюме и плащане"
+
+#~ msgid "Invoice Number"
+#~ msgstr "Номер на фактура"
+
+#~ msgid "Total Paid"
+#~ msgstr "Общо платено"
+
+#~ msgid "Total Due"
+#~ msgstr "Общо дължимо"
+
+#~ msgid "Amount to Pay"
+#~ msgstr "Сума за плащане"
+
+#~ msgid "Reference / Notes"
+#~ msgstr "Справка / Бележки"
+
+#~ msgid "Optional reference #"
+#~ msgstr "Незадължителен референтен номер"
+
+#~ msgid "Process Sale"
+#~ msgstr "Процес на продажба"
+
+#~ msgid "Transaction Completed"
+#~ msgstr "Транзакцията е завършена"
+
+#~ msgid "Processing..."
+#~ msgstr "Обработва се..."
+
+#~ msgid "POS Dashboard"
+#~ msgstr "POS табло"
+
+#~ msgid "Confirm Archiving Ticket"
+#~ msgstr "Потвърдете билета за архивиране"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "Primary Currency"
+#~ msgstr "Основна валута"
+
+#~ msgid "This will be used for all invoices and financial reports."
+#~ msgstr "Това ще се използва за всички фактури и финансови отчети."

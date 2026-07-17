@@ -107,9 +107,6 @@ def create_user():
                 new_user.set_password(password)
                 # Default regional settings from the branch configuration
                 shop_settings = db.session.scalar(db.select(ShopSetting).filter_by(location_id=loc.id))
-                if shop_settings:
-                    new_user.currency = shop_settings.currency
-                    new_user.currency_decimals = shop_settings.currency_decimals
 
                 new_user.roles.append(role)
                 try:

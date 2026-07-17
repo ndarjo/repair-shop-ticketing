@@ -71,18 +71,6 @@
                                     </select>
                                     <div class="form-text">{{ _('Select the primary language for the application interface.') }}</div>
                                 </div>
-
-                                <div class="mb-0">
-                                    <label for="currency" class="form-label">{{ _('Primary Currency') }}</label>
-                                    <select id="currency" name="currency" class="form-select">
-                                        {% for code, label in all_currencies %}
-                                            <option value="{{ code }}" {% if current_user.currency == code %}selected{% endif %}>
-                                                {{ label }}
-                                            </option>
-                                        {% endfor %}
-                                    </select>
-                                    <div class="form-text">{{ _('This will be used for all invoices and financial reports.') }}</div>
-                                </div>
                             </div>
                         </div>
 
